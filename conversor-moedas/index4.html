@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #formulario{
+            position: relative;
+            background-color: rgb(211, 211, 211);
+            width: 400px;
+            height: 250px;
+            margin: 50px auto 0 auto;
+            border-radius: 20px;
+            box-shadow: 2px 5px 4px #0000005b;
+            text-align: center;
+        }
+        form {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            font: normal bold 1em Arial, Helvetica, sans-serif;
+        }
+        input#valor {
+            width: 200px;
+            padding: 5px 0;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            border: 1px solid transparent;
+            outline: 0;
+            text-align: center;
+        }
+        #valor:focus {
+            border: 1px solid lightgray;
+        }
+        input.botao {
+            background-color: transparent;
+            color: white;
+            padding: 10px 15px;
+            margin: 0 10px;
+            border: 1px solid #00000059;
+            border-radius: 43%;
+            cursor: pointer;
+            font-variant: small-caps;
+            font-weight: bold;
+            text-shadow: 2px 2px 2px black;
+        }
+        .botao:hover {
+            box-shadow: 2px 2px 3px #00000067;
+        }
+    </style>
+</head>
+<body>
+    <div id="formulario">
+        <form method="get">
+            <label for="a">Conversor de Dolar/Euro</label> <br> <br>
+            <input type="number" name="" id="valor"> <br>
+            <input type="button" value="Dolar" id="botao_dolar" class="botao">
+            <input type="button" value="Euro" id="botao_euro" class="botao"> <br> <br>
+            <div id="res"></div>
+        </form>
+    </div>
+    <script>
+        var txtvalor = document.querySelector('#valor')
+        var dolar = document.querySelector('#botao_dolar')
+        var euro = document.querySelector('#botao_euro')
+        var res = document.querySelector('#res')
+        dolar.addEventListener('click', converter_dolar)
+        euro.addEventListener('click', converter_euro)
+
+        function converter_dolar() {
+            var valor = Number(txtvalor.value)
+            valor_convertido = valor / 5.09
+            res.innerHTML = `Você converteu R$${valor} e seu valor convertido é: $${valor_convertido.toFixed(2)}`
+        }
+        function converter_euro() {
+            var valor = Number(txtvalor.value)
+            valor_convertido = valor / 5.51
+            res.innerHTML = `Você converteu R$${valor} e seu valor convertido é: Є${valor_convertido.toFixed(2)}`
+        }
+    </script>
+</body>
+</html>
