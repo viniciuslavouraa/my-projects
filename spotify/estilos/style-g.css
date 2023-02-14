@@ -36,6 +36,10 @@ body {
         flex-wrap: wrap;
     }
 
+    span > img {
+        padding-left: 90px;
+    }
+    
     nav {
         display: flex;
         gap: 35px;
@@ -143,6 +147,8 @@ body {
     ul#bandeiras_cartao {
         display: flex;
         padding: 1px 0 10px 0;
+        margin-bottom: 40px;
+        gap: 8px;
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -157,5 +163,81 @@ body {
     }
     #veja-mais:hover > div {
         display: block;
+    }
+    /*Configurações box dos planos*/
+    section#planos_mensais {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    div.box_planos {
+        display: flex;
+        background-color: #ffffff;
+        width: 250px;
+        padding: 20px;
+        flex-direction: column;
+        border-radius: 15px;
+        box-shadow: 4px 4px 5px #00000050;
+    }
+    ul {
+        list-style: none;
+        list-style-position: inside;
+    }
+    .box_blue {
+        background-color: #2e77d0;
+        color: #ffffff;
+        padding: 10px;
+        margin-bottom: 10px;
+        font: normal bold 0.86em var(--font_bold);
+        text-align: left;
+        border-radius: 10px;
+    }
+    .box_white {
+        background-color: transparent;
+        color: #2e77d0;
+        width: 200px;
+        padding: 8px 8px;
+        margin-bottom: 10px;
+        font: normal bold 0.86em var(--font_bold);
+        text-align: left;
+        border: 1px solid #2e77d0;
+        border-radius: 10px;
+    }
+     section#planos_mensais h3 {
+        font-size: 1.5em;
+        font-weight: bolder;
+        margin-bottom: 8px;
+    }
+
+    ul.ofertas > li {
+        margin-bottom: 8px;
+    }
+    .btn_agora {
+        background-color: #131313fd;
+        color: #ffffffe8;
+        width: 230px;
+        padding: 14px 35px;
+        margin: 250px 0 10px 10px;
+        font: normal normal 0.97em var(--font_bold);
+        text-transform: uppercase;
+        outline: 0;
+        border: 1px solid black;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    .btn_agora:hover {
+        background-color: #000000;
+        color: #ffffff;
+        transform: scale(105%);
+    }
+    #btn_second {
+        margin-top: 278px;
+    }
+    #btn_last {
+        margin-top: 150px;
+    }
+    .box_planos a {
+        color: black;
     }
 }
