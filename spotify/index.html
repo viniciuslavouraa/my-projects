@@ -5,22 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify (BR)</title>
+    <link rel="stylesheet" href="estilos/style-g.css">
+    <link rel="stylesheet" href="estilos/style-m.css">
+    <link rel="stylesheet" href="estilos/style-p.css">
 </head>
 <body>
-    <header>
+    <!--header-->
+    <header id="topo">
+        <span>
+            <img src="images/spotify-logo.png" alt="Spotify-Logo">
+        </span>
         <nav>
-            <span>
-                <img src="images/spotify-logo.png" alt="Spotify-Logo">
-            </span>
             <a href="#">Premium</a>
             <a href="#">Suporte</a>
             <a href="#">Baixar</a>
-            <p style="display: inline;">|</p>
+            <p style="display: inline; color: white;">|</p>
             <a href="#">Inscrever-se</a>
             <a href="#">Entrar</a>
         </nav>
     </header>
     <main>
+        <!-- Conteúdo da promoção-->
         <section id="promo">
             <h1>Curta o Premium grátis por 2 meses</h1>
             <p>
@@ -30,14 +35,15 @@
                 <button class="btn" id="btn_comece">Comece Agora</button>
                 <button class="btn" id="btn_planos"> Ver planos</button>
             </div>
-            <p>
+            <p style="font-size: 0.7em;">
                 <a href="#">Sujeito a Termos e Condições.</a> Oferta de 2 meses grátis não disponivel para quem já usou o Premium
             </p>
         </section>
+        <!--Conteúdo porque ser premium-->
         <section id="premium">
             <h1>Porque ser Premium?</h1>
             <div id="img_premium">
-                <ul>
+                <ul id="premium_list">
                     <li>
                         <img src="images/img_som.png" alt="Modo_offline">
                         <p>
@@ -56,7 +62,7 @@
                         <img src="images/img_ordem.png" alt="Ouça_na_ordem_que_quiser">
                         <p>
                             <strong>Ouça na ordem que quiser.</strong> <br>
-                            Qualquer mpusica em qualquer ordem.
+                            Qualquer mpusica <br> em <br> qualquer ordem.
                         </p>
                     </li>
                     <li>
@@ -69,32 +75,144 @@
                 </ul>
             </div>
         </section>
-        <!-- Terminar planos-->
+        <!-- Planos mensais-->
         <section id="plano">
-            <header>
+            <header id="baixo">
                 <h1>Escolha seu plano Premium</h1>
                 <p>Ouça sem limites no seu celular, alto-falante e em outros dispositivos.</p>
-                <span id="bandeiras_cartao">
-                    <ul>
-                        <li>
+                <ul id="bandeiras_cartao">
+                    <li>
+                        <img src="bandeiras_cartao/visa-logo.png" alt="" style="width: 40px;">
+                    </li>
+                    <li>
+                        <img src="bandeiras_cartao/mastercard-logo.jpg" alt="" style="width: 40px;">
+                    </li>
+                    <li>
+                        <img src="bandeiras_cartao/amex-logo.png" alt="" style="width: 40px; height: 25px;">
+                    </li>
+                    <li>
+                        <img src="bandeiras_cartao/elo-logo.png" alt="" style="width: 40px;">
+                    </li>
+                    <li>
+                        <img src="bandeiras_cartao/hipercard-logo.png" alt="" style="width: 40px;">
+                    </li>
+                    <li style="text-decoration: underline;" id="veja-mais">+ outros 11
+                        <div>
                             <img src="" alt="">
-                        </li>
-                        <li>
                             <img src="" alt="">
-                        </li>
-                        <li>
                             <img src="" alt="">
-                        </li>
-                        <li>
                             <img src="" alt="">
-                        </li>
-                        <li>
                             <img src="" alt="">
-                        </li>
-                    </ul>
-                </span>
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                            <img src="" alt="">
+                        </div>
+                    </li>
+                </ul>
             </header>
+            <!--Plano individual-->
+            <div id="planos_box">
+                <ul class="planos" id="individual">
+                    <li>
+                        Faça um assinatura e tenha 2 meses grátis
+                    </li>
+                    <li>
+                        Pagamento único disponível
+                    </li>
+                </ul>
+                <h3>Individual</h3>
+                <p>
+                    R$ 19,90/mês após o período da oferta <br>
+                    1 conta
+                </p>
+                <hr>
+                <ul class="ofertas">
+                    <li>
+                        Ouça músicas sem anúncios
+                    </li>
+                    <li>
+                        Ouça em qualquer lugar — até quando estiver offline
+                    </li>
+                    <li>
+                        Ouça em qualquer lugar — até quando estiver offline
+                    </li>
+                    <li>
+                        Faça um plano pré-pago ou uma assinatura
+                    </li>
+                </ul>
+                <button class="btn_agora">Comece Agora</button>
+                <p>Sujeito a Termos e Condições. Oferta de 2 meses grátis não disponível para quem já usou o Premium.</p>
+                <!--Plano duo-->
+                <ul class="planos" id="duo">
+                    <li>
+                        Faça um assinatura e tenha 2 meses grátis
+                    </li>
+                    <li>
+                        Pagamento único disponível
+                    </li>
+                </ul>
+                <h3>Duo</h3>
+                <p>
+                    R$ 24,90/mês após o período da oferta <br>
+                    2 conta
+                </p>
+                <hr>
+                <ul class="ofertas">
+                    <li>
+                        2 contas Premium para pessoas que moram juntas
+                    </li>
+                    <li>
+                        Música sem anúncios, no modo offline e na ordem que você quiser
+                    </li>
+                    <li>
+                        Faça um plano pré-pago ou uma assinatura
+                    </li>
+                </ul>
+                <button class="btn_agora">Comece Agora</button>
+                <p>Sujeito a Termos e Condições. Oferta de 2 meses grátis não disponível para quem já usou o Premium.</p>
+                <!--Plano família-->
+                <ul class="planos" id="duo">
+                    <li>
+                        Faça um assinatura e tenha 2 meses grátis
+                    </li>
+                    <li>
+                        Pagamento único disponível
+                    </li>
+                </ul>
+                <h3>Família</h3>
+                <p>
+                    R$ 34,90/mês após o período da oferta <br>
+                    6 conta
+                </p>
+                <hr>
+                <ul class="ofertas">
+                    <li>
+                        6 contas Premium para familiares que moram no mesmo endereço
+                    </li>
+                    <li>
+                        Bloqueie músicas com conteúdo explícito
+                    </li>
+                    <li>
+                        Música sem anúncios, no modo offline e na ordem que você quise
+                    </li>
+                    <li>
+                        Spotify Kids: um app separado, feito especialmente para crianças
+                    </li>
+                    <li>
+                        Faça um plano pré-pago ou uma assinatura
+                    </li>
+                </ul>
+                <button class="btn_agora">Comece Agora</button>
+                <p>Sujeito a Termos e Condições. Oferta de 2 meses grátis não disponível para quem já usou o Premium.</p>
+            </div>
         </section>
     </main>
+    <footer>
+
+    </footer>
+    <script src="JS/spotify.js"></script>
 </body>
 </html>

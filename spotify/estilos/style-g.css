@@ -1,0 +1,161 @@
+@charset "UTF-9";
+@font-face {
+    font-family: spotify;
+    src: url(../fontes/Gotham-Bold.otf);
+}
+@font-face {
+    font-family: spotify-normal;
+    src: url(../fontes/GothamLight.ttf);
+}
+
+:root {
+    --font_bold: 'spotify';
+    --font_normal: 'spotify-normal';
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font_normal);
+}
+
+@media (max-width: 2500px) {
+    body {
+        background-color: #ffffff;
+    }
+    /* Configurações do header*/
+    header#topo  {
+        display: flex ;
+        background-color: #000000;
+        padding: 15px;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    nav {
+        display: flex;
+        gap: 35px;
+        font-family: var(--font_bold);
+    }
+    nav > a {
+        color: #ffffff;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 0.95em;
+    }
+    nav > a:last-child {
+        margin-right: 100px;
+    }
+    nav > a:hover {
+        color:#1ed760;
+    }
+
+    /*Configurações das promoções*/
+    section#promo {
+        background-color: #f037a5;
+        padding: 50px 0 20px 20px;
+    }
+    #promo > h1, #promo > p, #promo > a {
+        color: white;
+        padding: 25px 10px;
+    }
+    #promo > h1 {
+        font: normal bold 2.3em var(--font_bold);
+    }
+    #promo > p  {
+        color: white;
+        font-size: 1.4em;
+        font-weight: bold;
+    }
+    #promo  p > a {
+        color: white;
+        font-size: 0.9em;
+    }
+    /* Configurações botões promoção*/
+    div#btns {
+        padding: 20px 0 10px 10px;
+    }
+    button.btn {
+        padding: 20px 25px;
+        border-radius: 30px;
+        font-family: var(--font_bold);
+        cursor: pointer;
+    }
+    button#btn_comece {
+        background-color: #131313fd;
+        color: #ffffffe8;
+        text-transform: uppercase;
+        outline: 0;
+        border: 1px solid black;
+
+    }
+    #btn_comece:hover {
+        background-color: #000000;
+        color: #ffffff;
+        transform: scale(105%);
+    }
+    button#btn_planos {
+        background-color: transparent;
+        padding: 19px 35px;
+        text-transform: uppercase;
+        border: 2px solid #ffffff;
+    }
+    #btn_planos:hover {
+        background-color: #ffffff21;
+        transform: scale(105%);
+    }
+    /*Configurações do conteúdo premium*/
+    section#premium {
+        text-align: center;
+    }
+    section#premium h1{
+        font: normal normal 2.4em var(--font_bold);
+        margin: 50px 0 50px 0;
+    }
+    ul#premium_list {
+        list-style: none;
+        display: flex;
+        margin-bottom: 50px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    #premium_list > li > p {
+        padding: 20px 0 20px 0;
+        text-align: center;
+    }
+    /*Configurações  planos mensais*/
+    section#plano {
+        background-color: #efefef;
+        padding: 50px;
+    }
+    #baixo {
+        text-align: center;
+    }
+    #baixo > h1, #baixo > p {
+        padding-bottom: 10px;
+    }
+    ul#bandeiras_cartao {
+        display: flex;
+        padding: 1px 0 10px 0;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        list-style-position: inside;
+    }
+    #veja-mais > div {
+        background-color: white;
+        display: none;
+        width: 100px;
+        height: 100px;
+    }
+    #veja-mais:hover > div {
+        display: block;
+    }
+}

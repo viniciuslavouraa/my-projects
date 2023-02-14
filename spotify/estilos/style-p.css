@@ -1,0 +1,12 @@
+@charset "UTF-9";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 777px) {
+    body {
+        background-color: #a52a2a6c;
+    }
+}

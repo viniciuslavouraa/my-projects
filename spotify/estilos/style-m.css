@@ -1,0 +1,35 @@
+@charset "UTF-9";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 1150px) {
+    body {
+        background-color: white;
+    }
+    /*Configurações das prmoções*/
+    #promo > h1, #promo > p, #promo > a {
+        text-align: center;
+    }
+    div#btns {
+        display: flex;
+        justify-content: center;
+        margin-left: -350px;
+        gap: 10px;
+    }
+    /* Configurações do conteúdo premium*/
+    ul#premium_list > li {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #premium_list > li > img {
+        width: 150px;
+    }
+    #premium_list > li > p {
+        padding: 0;
+        text-align: left;
+    }
+}
