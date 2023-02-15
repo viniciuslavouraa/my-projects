@@ -57,6 +57,10 @@ body {
     nav > a:hover {
         color:#1ed760;
     }
+    /* Configurações de navegação para celular*/
+    nav#nav_celular {
+        display: none;
+    }
 
     /*Configurações das promoções*/
     section#promo {
@@ -218,7 +222,7 @@ body {
         color: #ffffffe8;
         width: 230px;
         padding: 14px 35px;
-        margin: 250px 0 10px 10px;
+        margin: 260px 0 10px 10px;
         font: normal normal 0.97em var(--font_bold);
         text-transform: uppercase;
         outline: 0;

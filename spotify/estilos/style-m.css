@@ -9,6 +9,48 @@
     body {
         background-color: white;
     }
+    nav {
+        display: none;
+    }
+    /*Configuração da navegação para celular*/
+    nav#nav_celular {
+        display: flex;
+        flex-direction: column;
+    }
+    #nav_btn{
+        display: flex;
+        background-color: transparent;
+        flex-direction: column;
+        align-items: flex-end;
+        cursor: pointer;
+    }
+    #nav_btn > div {
+        display: none;
+    }
+    #nav_btn:hover > div  {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    #nav_btn > div > a {
+        color: white;
+        text-decoration: none;
+        font: normal normal 1.2em var(--font_bold)
+    }
+    #nav_btn > div > a:first-child {
+        margin-top: 10px;
+    }
+    #nav_btn > div > a:hover {
+        color: #1ed760;
+    }
+    span.listra {
+        display: flex;
+        background-color: white;
+        width: 25px;
+        height: 5px;
+        margin-bottom: 5px;
+    }
     /*Configurações das prmoções*/
     #promo > h1, #promo > p, #promo > a {
         text-align: center;
@@ -31,5 +73,85 @@
     #premium_list > li > p {
         padding: 0;
         text-align: left;
+    }
+    /*Configurações box dos planos*/
+    section#planos_mensais {
+        display: flex;
+        margin-top: -30px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+    div.box_planos {
+        display: flex;
+        background-color: #ffffff;
+        width: 280px;
+        height: 540px;
+        padding: 20px;
+        flex-direction: column;
+        border-radius: 15px;
+        box-shadow: 4px 4px 5px #00000050;
+    }
+    ul {
+        list-style: none;
+        list-style-position: inside;
+    }
+    .box_blue {
+        background-color: #2e77d0;
+        color: #ffffff;
+        padding: 10px;
+        margin-bottom: 10px;
+        font: normal bold 0.86em var(--font_bold);
+        text-align: left;
+        border-radius: 10px;
+    }
+    .box_white {
+        background-color: transparent;
+        color: #2e77d0;
+        width: 200px;
+        padding: 8px 8px;
+        margin-bottom: 10px;
+        font: normal bold 0.86em var(--font_bold);
+        text-align: left;
+        border: 1px solid #2e77d0;
+        border-radius: 10px;
+    }
+        section#planos_mensais h3 {
+        font-size: 1.5em;
+        font-weight: bolder;
+        margin-bottom: 8px;
+    }
+
+    ul.ofertas > li {
+        margin-bottom: 8px;
+    }
+    .btn_agora {
+        background-color: #131313fd;
+        color: #ffffffe8;
+        width: 230px;
+        padding: 14px 35px;
+        margin: 40px 0 10px 30px;
+        font: normal normal 0.97em var(--font_bold);
+        text-transform: uppercase;
+        outline: 0;
+        border: 1px solid black;
+        border-radius: 30px;
+        cursor: pointer;
+    }
+    .btn_agora:hover {
+        background-color: #000000;
+        color: #ffffff;
+        transform: scale(105%);
+    }
+    #btn_second {
+        margin-top: 85px;
+    }
+    #btn_last {
+        margin-top: 0px;
+    }
+    .box_planos a {
+        color: black;
     }
 }
