@@ -4,9 +4,12 @@
     margin: 0;
     padding: 0;
 }
-
+ /* O probelma está na barra de navegação*/
 @media (max-width: 777px) {
     body {
         background-color: white;
+    }
+    nav {
+        display: none;
     }
 }
