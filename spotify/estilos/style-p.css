@@ -45,11 +45,12 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+        border: 0;
     }
     #nav_btn > div > a {
         color: white;
         text-decoration: none;
-        font: normal normal 1em var(--font_bold)
+        font: normal normal 1.3em var(--font_bold)
     }
     span.listra {
         display: flex;
