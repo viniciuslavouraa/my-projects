@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de IMC</title>
+    <link rel="stylesheet" href="estilos/imcstyle.css">
+</head>
+<body>
+    <section>
+        <div id="sexo-container">
+            <h1>Eu sou...</h1>
+            <button id="btn-m" class="btn">Homem</button>
+            <button id="btn-f" class="btn">Mulher</button>
+            <div id="sexo_img">
+
+            </div>
+        </div>
+
+        <div id="imc-content">
+            <div id="idade-box">
+                <label for="idade">Idade</label>
+                <input type="number" name="idade" id="idade">
+            </div>
+            <div id="altura-box">
+                <label for="altura">Altura</label>
+                <input type="number" name="altura" id="altura">
+            </div>
+            <div id="peso-box">
+                <label for="peso">Peso</label>
+                <input type="number" name="peso" id="peso">
+            </div>
+        </div>
+        <div id="btns">
+            <button type="reset" class="btn" id="limpar">Limpar</button>
+            <button class="btn" id="calcular">Calcular</button>
+        </div>
+        <div id="imc-result">
+        </div>
+    </section>
+    <script src="imc.js"></script>
+</body>
+</html>

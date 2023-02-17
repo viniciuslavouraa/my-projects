@@ -1,0 +1,64 @@
+@charset "UTF-8"; 
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+@keyframes animaçao {
+    0% {
+        color: blue;
+    }
+    15% {
+        color: blue;
+    }
+    25% {
+       color: blue;
+    }
+}
+@media (max-width: 2500px) {
+    section {
+        background-color: #22222225;
+        color: #000000;
+        width: 500px;
+        height: 250px;
+        margin: 45px auto;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    div#sexo-container {
+        text-align: center;
+    }
+    #sexo-container h1 {
+        font-size: 1.9em;
+        margin-bottom: 10px;
+        animation-name: animaçao;
+        transition-duration: 600ms;
+        transition-delay: .1s;
+        transition: all 1s;
+    
+    }
+    #sexo-container p {
+        font-size: 1.8em;
+    }
+    
+    input[type=number]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    
+    #dados {
+        width: 100px;
+    }
+    div#sexo_img img {
+        background-color: transparent;
+        height: 145px;
+    }
+}
+
+@media (max-width:650px) {
+    section {
+        background-color: #2222224b;
+        color: #000000;
+        width: 290px;
+    }
+}
