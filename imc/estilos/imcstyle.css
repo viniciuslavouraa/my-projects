@@ -5,17 +5,7 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-@keyframes animaçao {
-    0% {
-        color: blue;
-    }
-    15% {
-        color: blue;
-    }
-    25% {
-       color: blue;
-    }
-}
+
 @media (max-width: 2500px) {
     section {
         background-color: #22222225;
@@ -29,7 +19,7 @@
     div#sexo-container {
         text-align: center;
     }
-    #sexo-container h1 {
+     h1:hover {
         font-size: 1.9em;
         margin-bottom: 10px;
         animation-name: animaçao;
