@@ -11,33 +11,92 @@
         background-color: #22222225;
         color: #000000;
         width: 500px;
-        height: 250px;
+        height: 280px;
         margin: 45px auto;
         padding: 20px;
         border-radius: 8px;
     }
+    /* Configurações sexo da pessoa*/
     div#sexo-container {
         text-align: center;
     }
-     h1:hover {
-        font-size: 1.9em;
-        margin-bottom: 10px;
-        animation-name: animaçao;
-        transition-duration: 600ms;
-        transition-delay: .1s;
-        transition: all 1s;
+     h1 {
+        font-size: 1.7em;
+        margin-bottom: 7px;
     
     }
     #sexo-container p {
-        font-size: 1.8em;
+        font-size: 1.5em;
     }
-    
+
+    .btn {
+        background-color: transparent;
+        width: 120px;
+        padding: 6px;
+        font-size: 0.7em;
+        text-transform: uppercase;
+        border: 1px solid #0000006e;
+        border-radius:  20px;
+        box-shadow:  2px 1px 3px #00000071;
+        cursor: pointer;
+    }
+    .btn:hover {
+        font-size: 0.8em;
+        text-shadow: 1px 1px 2px #0000007c;
+        letter-spacing: 1px;
+        transform: scale(102%);
+        transition: transform 400ms;
+        box-shadow: 2px 3px 3px #0000003f;
+    }
+    /* Configurações do conteúdo IMC*/
+    div#imc-content {
+        display: flex;
+        margin: 20px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div#idade-box, #altura-box, #peso-box{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 2px;
+    }
+    #peso-box {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 1.2em;
+    }
+
     input[type=number]::-webkit-inner-spin-button {
         -webkit-appearance: none;
     }
+    input {
+        background-color: transparent;
+        padding: 4px;
+        outline: 0;
+        border: 1px solid #0000006e;
+        border-radius: 0 5px 5px 0;
+        box-shadow: 1px 1px 4px #00000071;
+    }
+    input:focus {
+        margin-bottom: 2px;
+        transform: scale(102%);
+        transition: transform 500ms;
+        box-shadow: 2px 3px 3px #0000003f;
+    }
+
+    div#btns {
+        margin-bottom: 10px;
+    }
     
     #dados {
-        width: 100px;
+        margin: -15px auto;
+        width: 200px;
+        text-align: center;
+        font-size: 1.2em;
     }
     div#sexo_img img {
         background-color: transparent;
