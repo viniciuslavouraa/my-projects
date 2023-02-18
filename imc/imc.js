@@ -1,7 +1,7 @@
 var btn_m = document.querySelector ('#btn-m')
 var btn_f = document.querySelector ('#btn-f')
 // config divs abaixo
-var sexo_img = document.querySelector ('#sexo_img')
+var sexo_img = document.querySelector ('#sexo_img') 
 var img = document.createElement ('img')
 btn_m.addEventListener ('click',homem)
 btn_f.addEventListener ('click', mulher)
@@ -31,7 +31,7 @@ btn_limpa.addEventListener ('clickL', limpar)
 btn_calc.addEventListener ('click', calcular)
 
 function limpar () {
-    
+
 }
 
 function calcular () {
