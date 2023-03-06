@@ -1,0 +1,496 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin:  0;
+    padding: 0;
+}
+
+
+:root {
+    --red-color: #FD5B44;
+    --red-color2: #F04B38;
+    --white-color: #FCFFFA;
+    --yellow-color: #FFD340;
+    --font: 'Bebas Neue', cursive;
+}
+
+body {
+    background-color: #FD5B44;
+    font-family: var(--font);
+}
+/* Desativar navegation para celular*/
+nav#nav-cell {
+    display: none;
+}
+/* Configuração cabeçalho*/
+header {
+    display: flex;
+    position: relative;
+    width: 700px;
+    height: 66px;
+    margin: 20px auto;
+    border: 2px solid #f5523c;
+    border-radius: 10px;
+}
+/* Configuração da logo*/
+span.logo {
+    background-color: var(--white-color);
+    padding: 10px;
+}
+span#bloco-logo1 {
+    display: flex;
+    border-radius: 10px 0 0 10px;
+    padding: 10px 15px;
+    margin-right: 2px;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+}
+#bloco-logo1:first-child {
+    align-items: flex-end;
+}
+
+span#no-background {
+    display: flex;
+    background-color: var(--white-color);
+    color: var(--white-color);
+    padding: 10px;
+    align-items: center;
+    border: 0;
+}
+span#no-background  h1 {
+    background-color: var(--red-color);
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    margin-left: -20px;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+span#bloco-logo2 {
+    display: flex;
+    padding-right: 90px;
+    justify-content: center;
+    flex-direction: column;
+}
+#bloco-logo2 p {
+    color: var(--red-color);
+    margin-left: -15px;
+    margin-bottom: -8px;
+    letter-spacing: 6px;
+}
+/* Configurações da navegação*/
+div.navegation-container {
+    display: flex;
+    align-items: center;
+}
+nav#nav-principal {
+    display: flex;
+    position: absolute;
+    left: 48%;
+    gap: 50px;
+}
+nav#redes-sociais {
+    position: absolute;
+    right: 0;
+}
+#nav-principal a {
+    display: flex;
+    color: var(--white-color);
+    height: 70px;
+    padding: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    align-items: center;
+}
+#nav-principal a:hover {
+    background-color: var(--white-color);
+    color: black;
+    transform: scale(105%);
+    transition: all 400ms;
+}
+/* Section de apresentação do conteúdo*/
+section#apresentaçao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+/*Configuração do oskar container*/
+div#oskar-container {
+    display: flex;
+    flex-direction: column;
+}
+div#learn-more {
+    display: flex;
+    height: 50px;
+    margin-right: 45px;
+    align-items: center;
+    align-self: flex-end; 
+    cursor: pointer;
+}
+#yellow-block {
+    background-color: var(--yellow-color);
+    width: 20px;
+    height: 45px;
+    border-radius: 2px 0px 0 2px ;
+    margin-right: 2px;
+}
+#trans-block {
+    display: flex;
+    background-color: var(--white-color);
+    height: 45px;
+    align-items: center;
+}
+#trans-block p {
+    color: var(--white-color);
+    background-color: var(--red-color);
+    padding: 2px;
+    margin-left: -10px;
+    border-radius: 50%;
+}
+
+#white-block {
+    display: flex;
+    align-items: center;
+    background-color: var(--white-color);
+    width: 100px;
+    height: 45px;
+    padding: 0 10px;
+    border-radius: 0 10px 10px 0;
+}
+#white-block p {
+    color: var(--red-color);
+}
+/* section mostrando os trabalhos criados*/
+section#my-work {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+div.content {
+    display: flex;
+    position: relative;
+    background-color: var(--red-color2);
+    height: 350px;
+    padding: 10px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px #00000070;
+    flex-direction: column;
+}
+div.works {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+div.works p:first-child {
+    color: var(--white-color);
+    font-size: 1.6em;
+    text-shadow: 1px 1px 2px black;
+}
+div.works p:last-child {
+    color: var(--yellow-color);
+    padding-bottom: 15px;
+}
+div.img-box {
+    margin-bottom: 10px;
+    border: 4px solid var(--white-color);
+    border-radius: 8px;
+
+}
+#my-work img {
+    display: block;
+    margin: auto;
+}
+div.legenda{
+    display: flex;
+    letter-spacing: 1px;
+    color: var(--white-color);
+    text-shadow: 1px 1px 2px black;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+/* branding, indetity*/
+span.modelos-box {
+    background-color: var(--yellow-color);
+    color: var(--red-color);
+    padding: 2px 10px;
+    font-size: .9em;
+    text-shadow: none;
+    border-radius: 3px;
+}
+
+div.show {
+    margin-top: 35px;
+}
+
+.btn-show {
+    position: relative;
+    background-color: var(--white-color);
+    left: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+}
+.btn-show:hover {
+    background-color: #e7e7e7;
+    transform: scale(105%);
+}
+/* Configurações de Conferences & Events*/
+section#events h1 {
+    color: var(--white-color);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    font-size: 2.1em;
+    text-align: center;
+}
+div#conferences {
+    display: flex;
+    justify-content: center;
+}
+#conferences span {
+    color: var(--white-color);
+    padding: 8px 50px;
+    margin-bottom: 50px;
+    font-size: 0.9em;
+    border: 1px solid #f5523c;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#conferences span:hover{
+    background-color: var(--white-color);
+    color: var(--red-color2);
+    z-index: 1;
+    box-shadow: 2px 2px 3px #00000028;
+    transform: scale(103%);
+    transition: all 400ms;
+}
+/*Configurações locais dos eventos*/
+div#paises {
+    display: flex;
+    color: var(--white-color);
+    visibility: hidden;
+    margin-bottom: 50px;
+    font-size: 0.9em;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.locais {
+    display: flex;
+    padding: 15px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-top: 2px solid #f5523c;
+    border-bottom: 2px solid #f5523c;
+    width: 440px;
+}
+/* configurações 2023 best*/
+section#best {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+#logo {
+    display: flex;
+    z-index: 1;
+    background-color: var(--red-color2);
+    padding: 10px;
+    margin-right: -22px;
+    border: 2px solid #F04B38;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 5px 2px 3px #00000059;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+#oskar-logo {
+    display: flex;
+    color: var(--white-color);
+    align-items: center;
+    gap: 4px;
+}
+#oskar-logo div  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#oskar-logo h1 {
+    background-color: var(--white-color);
+    color: var(--red-color2);
+    width: 45px;
+    font-size: 2.1em;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-shadow: none;
+}
+#oskar-logo p {
+    margin-top: -6px;
+    margin-bottom: -1px;
+    letter-spacing: 6px;
+}
+div#tittle-best p, h1 {
+    color: var(--white-color);
+
+}
+#tittle-best h1 {
+    font-size: 2.2em;
+}
+#tittle-best p {
+    font-size: 0.9em;
+    
+}
+
+#img-branding-2 {
+    z-index: 0;
+    border: 4px solid var(--white-color);
+    border-radius: 8px;
+    box-shadow: 5px 2px 3px #00000059;
+}
+/* Configurações carrosel personal awards*/
+section#personal-award {
+    display: flex;
+    background-color: var(--red-color2);
+    padding: 20px;
+    margin: 50px 0 50px 180px;
+    border-radius: 15px 0 0 15px ;
+    justify-content: left;
+}
+div.carrosel-container {
+    display: flex;
+}
+div.carrosel-controle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.carrosel-controle h1  {
+    font-size: 2.2em;
+}
+div.carrosel-conteudo {
+    display: flex;
+    padding-left: 15px;
+    gap: 80px;
+}
+/* Configuração dos premios*/
+#award1, #award2, #award3 {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+.awards h2 {
+    color: var(--white-color);
+    margin-bottom: 3px;
+    font-size: 1.4em;
+}
+.awards > span {
+    padding: 0 8px;
+    color: var(--yellow-color);
+    border: 2px solid var(--yellow-color);
+    border-radius: 3px;
+}
+/* Configurações dos botões left e right*/
+
+.left, .right {
+    background-color: transparent;
+    padding: 7px;
+    margin-top: 8px;
+    border: 1px solid #d13f2f;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.left:hover, .right:hover {
+    position: relative;
+    background-color: #bdbdbd1e;
+    transition: all 500ms;
+    transform: scale(103%);
+    box-shadow: 2px 3px 3px #0000003a;
+    top: -4px;
+}
+/* Configurações das redes sociais*/
+section.container-redes {
+    display: flex;
+    background-color: var(--red-color2);
+    padding: 20px;
+    margin: 50px 0 50px 180px;
+    border-radius: 15px 0 0 15px ;
+    justify-content: left;
+}
+div#redes-sociais {
+    display: flex;
+    padding-left: 15px;
+    align-items: center;
+    gap: 60px;
+}
+#redes-sociais h1 {
+    font-size: 2.2em;
+    margin-right: 50px;
+}
+.box-sociais {
+    border: 3px solid var(--white-color);
+    height: 50px;
+    box-shadow: 2px 3px 3px #00000062;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.box-sociais:hover {
+    position: relative;
+    transition:  600ms;
+    transform: scale(105%);
+    box-shadow: 3px 4px 3px #0000006e;
+    top: -10px;
+}
+.box-sociais > div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/*Configurações do background das redes sociais*/
+#twitter {
+    background-color: #58b1e9;
+}
+#twitch {
+    background-color: #8850f0;
+}
+#facebook {
+    background-color: #3359a3;
+}
+#instagram {
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+/* footer*/
+footer {
+    display: flex;
+    background-color: var(--red-color2);
+    color: var(--white-color);
+    padding: 10px;
+    justify-content: center;
+}
+footer a {
+    text-decoration: none;
+    padding: 2px 5px;
+    color: var(--white-color);
+    margin-left: 8px;
+}
+
+footer a:hover {
+    background-color: var(--white-color);
+    color: var(--red-color2);
+    border-radius: 8px;
+}
