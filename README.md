@@ -5,4 +5,4 @@
 <a href="https://viniciuslavouraa.github.io/my-projects/wikpedia/index.html" target="_blank">Wikpedia site(Lista de presidentes)</a><br>
 <a href="https://viniciuslavouraa.github.io/my-projects/spotify/index.html" target="_blank">Site do Spotify</a><br>
 <a href="https://viniciuslavouraa.github.io/my-projects/imc/" target="_blank">Calculador de IMC</a><br>
-<a href="https://viniciuslavouraa.github.io/my-projects/landingpage01/" target="_blank">Calculador de IMC</a><br>
+<a href="https://viniciuslavouraa.github.io/my-projects/landingpage01/" target="_blank">Landing Page 01</a><br>
