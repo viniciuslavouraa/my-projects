@@ -21,7 +21,6 @@ class Calculator {
     // Process all calculator operations
     processOperation(operation) {
         
-
         // Get current and previuos value
         let operationValue ;
         const previous = +this.previousOperationText.innerText
