@@ -20,16 +20,49 @@ class Calculator {
 
     // Process all calculator operations
     processOperation(operation) {
+
+        // Check if current is empty
+        if (this.currentOperationText.innerText === '' && operation !== 'C') {
+            // change operation
+            if (this.previousOperationText.innerText !== '') {
+                this.changeOperation(operation)
+            }
+            return
+        }
         
         // Get current and previuos value
-        let operationValue ;
-        const previous = +this.previousOperationText.innerText
+        let operationValue;
+        const previous = +this.previousOperationText.innerText.split(' ')[0]
         const current = +this.currentOperationText.innerText
 
         switch (operation) {
             case '+':
                 operationValue = previous + current ;
-                this.updateScreen(operationValue, operation, previous, current )
+                this.updateScreen(operationValue, operation, current, previous )
+            break;
+            case '-':
+                operationValue = previous - current ;
+                this.updateScreen(operationValue, operation, current, previous )
+            break;
+            case '/':
+                operationValue = previous / current ;
+                this.updateScreen(operationValue, operation, current, previous )
+            break;
+            case 'x':
+                operationValue = previous * current ;
+                this.updateScreen(operationValue, operation, current, previous )
+            break;
+            case 'DEL' :
+                this.processDelOperator()
+            break
+            case 'Ce':
+                this.processClearCurrentOperator()
+            break;
+            case 'C':
+                this.processClearAllOperator()
+            break;
+            case '=':
+                this.processEqualOperation()
             break;
             default:
                 return;
@@ -50,15 +83,40 @@ class Calculator {
             if (previous == 0) {
                 operationValue = current
             }
-
-            //continuar adicionando operadores a calculadora
-
-
             //add current value to previous
-            console.log(`${operationValue} ${operation}`)
-            this.previousOperationText.innerText = ` ${operationValue} ${operation}`
+            this.previousOperationText.innerText = `${operationValue} ${operation}`
             this.currentOperationText.innerText = ''
+            this.processEqualOperation()
         }
+    }
+
+    // change math operations
+    changeOperation(operation) {
+        const mathOperations = ['*', '/', '+', '-']
+
+        if (!mathOperations.includes(operation)) {
+            return
+        }
+
+        this.previousOperationText.innerText = this.previousOperationText.innerText.slice(0, -1) + operation
+    }
+    // Delete de last digit
+    processDelOperator() {
+        this.currentOperationText.innerText = this.currentOperationText.innerText.slice(0, -1)
+    }
+    // Clear current operator
+    processClearCurrentOperator() {
+        this.currentOperationText.innerText = ''
+    }
+    // Clear all operations
+    processClearAllOperator() {
+        this.previousOperationText.innerText = ''
+        this.currentOperationText.innerText = ''
+    }
+    // process an operation
+    processEqualOperation() {
+        const operation = previousOperationText.innerText.split(' ')[1]
+        this.processOperation(operation)
     }
 }
  const calc = new Calculator (previousOperationText, currentOperationText)
