@@ -1,0 +1,233 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+:root {
+    /* Colors*/
+    --black-color: #1A1B1A;
+    --yellow-color: #FFDD00;
+    --orange-color: #FF8200;
+    --orange-color-2: #ff9b33;
+    --white-color: #fff ;
+    /* Fonts*/
+    --font: 'Montserrat', sans-serif;
+}
+
+@media (max-width:2500px) {
+    /* section mulher dirigindo*/
+    #mulher-dirigindo {
+        background-image: url(../images/mulher-dirigindo.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    /* barra de navegação*/
+    header {
+        display: flex;
+        justify-content: center;
+        z-index: 100;
+        position: fixed;
+        width: 99vw;
+        padding: 8px 0 15px 30px;
+        gap: 20px;
+    }
+    /* config titulo e navagação*/
+    #tittle-box  {
+        padding-top: 10px;
+    }
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 10px;
+        gap: 25px;
+    }
+    nav a, button {
+        color: var(--black-color);
+        font-size: 0.88em;
+        font-weight: 600;
+        text-decoration: none;
+    }
+    nav a:last-child {
+        position: relative;
+        left: -15px;
+    }
+
+    nav button {
+        background-color: transparent;
+        padding: 15px 30px;
+        border: 2px solid black;
+        border-radius: 30px;
+    }
+    /* configs hover navegação*/
+    nav a:hover {
+        text-shadow: 1px 1px 5px #0000002c;
+    }
+    nav button:hover {
+        background-color: var(--orange-color-2);
+        color: var(--white-color);
+        border: 2px solid var(--orange-color-2);
+        cursor: pointer;
+        transition: background-color 400ms;
+    }
+    /* configs quero ser motorista*/
+    #box-quero-ser-motorista {
+        display: flex;
+        padding: 80px 0 150px 100px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #box-quero-ser-motorista span {
+        background-color: var(--orange-color);
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+    }
+    #box-quero-ser-motorista span > img {
+        margin: 8px 1px 0 0;
+    }
+    #box-amarela {
+        display: flex;
+        background-color: var(--yellow-color);
+        width: 350px;
+        height: 400px;
+        padding: 90px 0 0 25px;
+        border-radius: 15px;
+    }
+    /* config pra seta ficar sob a box amarela*/
+    #box-quero-ser-motorista span {
+        position: relative;
+        top: 25px;
+        left: 18px;
+    }
+    /* config conta com a 99*/
+    #conta-com-99 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #conta-com-99 h1 {
+        color: var(--black-color);
+        padding-bottom: 25px;
+        font-size: 2.6em;
+        font-weight: 900;
+    }
+    #conta-com-99 p {
+        color: var(--black-color);
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+    /* config botao quero ser um motorista*/
+    #btn-quero-ser-motorista button {
+        width: 350px;
+        padding: 20px;
+        top: 15px;
+    }
+    /* configs seção seja um motorista 99*/
+    #sect-seja-motorista {
+        background-color: var(--yellow-color);
+    }
+    #seja-motorista-container {
+        display: flex;
+        padding: 90px 25px 90px 25px;
+        gap: 20px;
+    }
+    #seja-motorista-box {
+        display: flex;
+        flex-direction: column;
+    }
+    #box-seja-motorista {
+        display: flex;
+        background-color: var(--white-color);
+        width: 600px;
+        padding: 68px 0 50px 25px;
+        border-radius: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* h1 e p de seja um motorista da 99*/
+    #box-seja-motorista h1 {
+        color: var(--black-color);
+        font-weight: 900;
+        font-size: 2.2em;
+        line-height: 1.2em;
+    }
+    #box-seja-motorista p {
+        color: var(--black-color);
+        font-weight: 500;
+        font-size: 1.3em;
+        line-height: 1.2em;
+    }
+    /* Config botao seja motorista 99*/
+    #btn-quero-ser-motorista-2 button {
+        width: 600px;
+        padding: 30px;
+        top: 15px;
+    }
+    /* seja um motorista imagem*/
+    #seja-motorista-imagem {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* box vazias config*/
+    #box-vazia {
+        display: flex;
+        gap: 20px;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
+    .box-vazia {
+        background-color: var(--white-color);
+        width: 120px;
+        height: 100px;
+        border-radius: 15px;
+    }
+    .box-vazia:last-child {
+        width: 190px;
+        height: 100px;
+    }
+    #box-img {
+        background: #1A1B1A url(../images/homem-img.png) no-repeat center center scroll;
+        background-size: cover;
+        width: 325px;
+        height: 300px;
+        border-radius: 20px;
+    }
+    /* botões config*/
+    .btns {
+        position: relative;
+        background-color: var(--orange-color);
+        color: var(--white-color);
+        border: 0;
+        border-radius: 15px;
+    }
+    .btns:hover {
+        background-color: var(--orange-color-2);
+        cursor: pointer;
+    }
+
+    /* classList para o JS*/
+    .buttonJs {
+        background-color: var(--orange-color-2);
+        color: var(--black-color);
+        border: 2px solid var(--orange-color-2);
+    }
+}
+@media (max-width:900px) {
+
+}
+@media (max-width:500px) {
+
+}
