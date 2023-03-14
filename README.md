@@ -9,6 +9,7 @@
 <a href="https://viniciuslavouraa.github.io/my-projects/imc/" target="_blank">Calculador de IMC</a><br>
 
 <a href="https://viniciuslavouraa.github.io/my-projects/calculadora/" target="_blank">Calculadora <br>
-<img src="calc-img.png" alt="" width="90px" height="90px"></a><br>
+<img src="calc-img.png" alt="" width="120px" height="100px"></a><br>
 
-<a href="https://viniciuslavouraa.github.io/my-projects/landingpage01/" target="_blank">Landing Page 01</a><br>
+<a href="https://viniciuslavouraa.github.io/my-projects/landingpage01/" target="_blank">Landing Page 01 <br>
+<img src="landingpage-img.png" alt="" width="120px" height="100px"></a><br>
