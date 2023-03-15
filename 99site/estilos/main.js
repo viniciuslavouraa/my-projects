@@ -17,3 +17,40 @@ document.addEventListener('scroll', () => {
     
 
 })
+//Resolver o mistério do código que para de funcionar do nada
+// Carrossel de beneficios para motoristas 
+
+const leftBtn = document.querySelector('#btnLeft')
+const rightBtn = document.querySelector('#btnRight')
+const items = document.querySelectorAll('.item-box')
+const carouselContainer = document.querySelector('#carrosel-container')
+
+let currentItemIndex = 0
+
+function showCurrentItem() {
+    items.forEach(item => {
+        item.style.display = 'flex'
+        item.style.flexDirection = 'column'
+    })
+
+    items[currentItemIndex].style.display = 'block';
+    items[currentItemIndex].style.alignItems = 'center'
+    items[currentItemIndex].style.transition = '500ms'
+      // Verifica se o item atual está dentro do contêiner
+  if (items[currentItemIndex].offsetParent == carouselContainer) {
+    return
+  }
+  // Caso contrário, rola o contêiner até o item atual
+  items[currentItemIndex].scrollIntoView({ behavior: 'smooth', block: 'center' })
+}
+
+leftBtn.addEventListener('click', () => {
+    currentItemIndex = (currentItemIndex == 0) ? items.length -1 : currentItemIndex -1
+    showCurrentItem()
+})
+
+rightBtn.addEventListener('click', () => {
+    currentItemIndex  = (currentItemIndex == items.length -1 ) ? 0 : currentItemIndex + 1 
+    showCurrentItem()
+})
+showCurrentItem()
