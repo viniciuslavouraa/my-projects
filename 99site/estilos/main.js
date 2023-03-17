@@ -3,7 +3,7 @@ let btnHeader = document.querySelector('#btn1')
 document.addEventListener('scroll', () => {
     let positionY = window.pageYOffset
     console.log(positionY)
-    if(positionY !== 0 ) {
+    if(positionY !== 0  && document.body.clientWidth > 988) {
         header.style.transitionDelay = '100ms'
         header.style.backgroundColor = 'white'
         header.style.boxShadow = '0 2px 3px #00000081'
@@ -19,6 +19,13 @@ document.addEventListener('scroll', () => {
 })
 // Navegação responsiva 
 
+const btnNav = document.querySelector('#btn-nav')
+const navItems = document.querySelector('#nav-itens')
+btnNav.addEventListener('click', () => {
+    navItems.classList.toggle('navClass')
+
+        
+})
 
 
 
@@ -30,7 +37,7 @@ document.addEventListener('scroll', () => {
 //Resolver o mistério do código que para de funcionar do nada
 // Carrossel de beneficios para motoristas 
 
-/*const leftBtn = document.querySelector('#btnLeft')
+const leftBtn = document.querySelector('#btnLeft')
 const rightBtn = document.querySelector('#btnRight')
 const items = document.querySelectorAll('.item-box')
 const carouselContainer = document.querySelector('#carrosel-container')
@@ -39,13 +46,14 @@ let currentItemIndex = 0
 
 function showCurrentItem() {
     items.forEach(item => {
-        item.style.display = 'flex'
+        item.style.display = 'none'
         item.style.flexDirection = 'column'
     })
 
     items[currentItemIndex].style.display = 'block';
     items[currentItemIndex].style.alignItems = 'center'
     items[currentItemIndex].style.transition = '500ms'
+
       // Verifica se o item atual está dentro do contêiner
   if (items[currentItemIndex].offsetParent == carouselContainer) {
     return
@@ -64,5 +72,5 @@ rightBtn.addEventListener('click', () => {
     showCurrentItem()
 })
 showCurrentItem()
- */
+
 //How to create a simple carousel in JavaScript?
