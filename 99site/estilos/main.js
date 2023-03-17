@@ -3,7 +3,7 @@ let btnHeader = document.querySelector('#btn1')
 document.addEventListener('scroll', () => {
     let positionY = window.pageYOffset
     console.log(positionY)
-    if(positionY !== 0) {
+    if(positionY !== 0 ) {
         header.style.transitionDelay = '100ms'
         header.style.backgroundColor = 'white'
         header.style.boxShadow = '0 2px 3px #00000081'
@@ -17,10 +17,20 @@ document.addEventListener('scroll', () => {
     
 
 })
+// Navegação responsiva 
+
+
+
+
+
+
+
+
+
 //Resolver o mistério do código que para de funcionar do nada
 // Carrossel de beneficios para motoristas 
 
-const leftBtn = document.querySelector('#btnLeft')
+/*const leftBtn = document.querySelector('#btnLeft')
 const rightBtn = document.querySelector('#btnRight')
 const items = document.querySelectorAll('.item-box')
 const carouselContainer = document.querySelector('#carrosel-container')
@@ -54,5 +64,5 @@ rightBtn.addEventListener('click', () => {
     showCurrentItem()
 })
 showCurrentItem()
-
+ */
 //How to create a simple carousel in JavaScript?

@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+:root {
+    /* Colors*/
+    --black-black: #000 ;
+    --black-color: #1A1B1A;
+    --yellow-color: #FFDD00;
+    --orange-color: #FF8200;
+    --orange-color-2: #ff9b33;
+    --white-color: #fff ;
+    --grey-color: #E5E5E5;
+    --strong-grey-color: #4a4b4a;
+    /* Fonts*/
+    --font: 'Montserrat', sans-serif;
+}
+
+/* Media query tela 988px*/
+@media (max-width:988px) {
+
+    /* Conta com a 99*/
+    #box-quero-ser-motorista {
+        display: flex;
+        padding: 80px 0 150px 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    #box-amarela {
+        display: flex;
+        background-color: var(--yellow-color);
+        width: 350px;
+        height: 400px;
+        padding: 90px 0 0 25px;
+        margin-top: 300px;
+        border-radius: 15px;
+    }
+    /* config pra seta ficar sob a box amarela*/
+    #box-quero-ser-motorista span {
+        position: relative;
+        top: 320px;
+        left: -120px;
+    }
+    /*seção segurança até seu destino*/
+    #container-segurança {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 80px 0 150px 0;
+        gap: 10px;
+    }
+    #box-laranja {
+        display: flex;
+        background-color: var(--orange-color);
+        width: 360px;
+        padding: 230px 25px 25px 25px;
+        border-radius: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    /* Seja motorista da 99*/
+    #seja-motorista-container {
+        display: flex;
+        padding: 90px 25px 90px 25px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+    }
+    #seja-motorista-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #box-seja-motorista {
+        display: flex;
+        background-color: var(--white-color);
+        width: 300px;
+        padding: 68px 0 50px 25px;
+        border-radius: 20px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #btn-quero-ser-motorista-2 button {
+        width: 320px;
+        padding: 30px;
+        top: 15px;
+        margin-bottom: 15px;
+    }
+}
