@@ -54,3 +54,5 @@ rightBtn.addEventListener('click', () => {
     showCurrentItem()
 })
 showCurrentItem()
+
+//How to create a simple carousel in JavaScript?

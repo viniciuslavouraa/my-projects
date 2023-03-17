@@ -18,6 +18,7 @@
     --orange-color: #FF8200;
     --orange-color-2: #ff9b33;
     --white-color: #fff ;
+    --grey-color: #E5E5E5;
     /* Fonts*/
     --font: 'Montserrat', sans-serif;
 }
@@ -31,7 +32,7 @@
         background-size: cover;
     }
     /* barra de navegação*/
-    header {
+    #header-navbar {
         display: flex;
         justify-content: center;
         z-index: 100;
@@ -351,7 +352,7 @@
     #box-laranja h4 {
         font-size: 1.6em;
     }
-    #box-laranja p {
+    #box-laranja > p {
         display: inline-block;
         padding-right: 25px;
         font-size: 1.7em;
@@ -371,6 +372,201 @@
         background-color: var(--black-black);
         color: var(--white-color);
         cursor: pointer;
+    }
+    /*seção 99 para empresas*/
+    #para-empresas {
+        display: flex;
+        background-color: var(--grey-color);
+        padding: 90px 0;
+        justify-content: center;
+        align-items: center;
+        gap: 88px;
+    }
+    #moca-img > img {
+        margin-top: 25px;
+        box-shadow: -32px -32px 0px 0px #ffdd00;
+        border-radius: 40px;
+    }
+    #container-99-empresa {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    #container-99-empresa > h4, #gerencie-corridas, #conta-com-a-99 {
+        color: var(--black-black);
+        text-align: left;
+    }
+    #container-99-empresa > h4 {
+        font-size: 1.5em;
+        font-weight: 800;
+    }
+    #gerencie-corridas {
+        font-size: 2.4em;
+        
+    }
+    #conta-com-a-99 {
+        font-size: 1.4em;
+        font-weight: 700;
+    }
+    #container-99-empresa > button {
+        background-color: var(--black-black);
+        color:var(--white-color);
+        font-size: 1.1em;
+        font-weight: 700;
+        width: 250px;
+        padding: 12px 25px;
+        border: 2px solid transparent;
+        border-radius: 15px;
+    }
+    #container-99-empresa > button:hover {
+        background-color: transparent;
+        color: var(--black-black);
+        border: 2px solid var(--black-black);
+        cursor: pointer;
+    }
+    /* Blog 99*/
+    #blog-tittle {
+        display: flex;
+        width: 98vw;
+        padding: 60px 0 30px 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #blog-tittle > h2 {
+        color: var(--black-black);
+        font-size: 2.2em;
+        font-weight: 800;
+    }
+    #ir-ao-blog {
+        color: var(--orange-color);
+        font-size: 1.6em;
+        font-weight: 800;
+    }
+    #blog-container {
+        display: flex;
+        justify-content: center;
+        gap: 45px;
+        padding: 50px 0;
+    }
+    #box-moto-img {
+        display: flex;
+        background: var(--black-black) url(../images/img-motos.jpg) no-repeat center center scroll;
+        background-size: cover;
+        width: 600px;
+        height: 380px;
+        padding: 150px 0 0 25px;
+        border-radius: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+        gap: 25px;
+    }
+    #box-moto-img button {
+        background-color: var(--orange-color);
+        color: var(--white-color);
+        font-weight: 800;
+        letter-spacing: 1px;
+        padding: 8px 15px;
+        border:0;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    #lista-motos {
+        color: var(--white-color);
+        font-size: 1.7em;
+        font-weight: 700;
+        text-align: left;
+    }
+    #aside-motos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .motorista {
+        border-top: 2px solid var(--grey-color);
+        text-align: left;
+    }
+    .motorista h4 {
+        color: var(--orange-color);
+        padding: 25px 0 5px 0;
+        font-size: 1em;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+    }
+    .motorista p {
+        color: var(--black-black);
+        font-size: 1.1em;
+        font-weight: 700;
+    }
+    #ir-ao-blog:hover, #todos-post:hover {
+        color: var(--orange-color-2);
+        cursor: pointer;
+    }
+    /* newsroom 99*/
+    #newsroom-tittle {
+        display: flex;
+        width: 98vw;
+        padding: 60px 0 10px 0;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #newsroom-tittle > h2 {
+        color: var(--black-black);
+        font-size: 2.2em;
+        font-weight: 800;
+    }
+    #todos-post {
+        color: var(--orange-color);
+        font-size: 1.6em;
+        font-weight: 800;
+    }
+
+    #newsroom-container {
+        display: flex;
+        padding: 60px 0;
+        justify-content: center;
+        gap: 30px;
+    }
+    .img-newsroom {
+        width: 360px;
+    }
+    .img-newsroom > img {
+        border-radius: 50px;
+    }
+    .img-newsroom > img:first-child {
+        padding-left: 30px;
+    }
+    .descricao-posts {
+        padding: 10px 0 0 30px;
+    }
+    .descricao-posts > p {
+        color: var(--black-black);
+        font-size: 1.3em;
+        font-weight: 700;
+        text-align: left;
+        text-align: left;
+    }
+    /* ultima seção*/
+    #ultima-seçao {
+        display: flex;
+        background-color: var(--yellow-color);
+        padding: 65px 0;
+        justify-content: space-around;
+        align-items: center;
+        gap: 25px;
+    }
+    #ultima-seçao >h1 {
+        color: var(--black-black);
+        font-size: 2.2em;
+        font-weight: 800;
+    }
+    #ultima-seçao button {
+        width: 356px;
+        height: 65px;
+        font-size: 1em;
+        font-weight: 800;
     }
     /* botões config*/
     .btns {
