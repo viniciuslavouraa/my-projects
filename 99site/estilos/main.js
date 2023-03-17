@@ -27,13 +27,6 @@ btnNav.addEventListener('click', () => {
         
 })
 
-
-
-
-
-
-
-
 //Resolver o mistério do código que para de funcionar do nada
 // Carrossel de beneficios para motoristas 
 
