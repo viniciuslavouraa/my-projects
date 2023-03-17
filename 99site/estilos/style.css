@@ -628,6 +628,14 @@
         flex-direction: column;
         gap: 20px;
     }
+    #seja-motorista-container {
+        display: flex;
+        padding: 90px 25px 90px 25px;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+    }
 }
 @media (max-width:500px) {
 
