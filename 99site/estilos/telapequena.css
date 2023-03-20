@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+:root {
+    /* Colors*/
+    --black-black: #000 ;
+    --black-color: #1A1B1A;
+    --yellow-color: #FFDD00;
+    --orange-color: #FF8200;
+    --orange-color-2: #ff9b33;
+    --white-color: #fff ;
+    --grey-color: #E5E5E5;
+    --strong-grey-color: #4a4b4a;
+    /* Fonts*/
+    --font: 'Montserrat', sans-serif;
+}
+/* Media query tela de celular*/
+@media (max-width:730px) {
+    /* Conta com a 99*/
+    #box-amarela {
+        width: 280px; 
+        height: 400px;
+        padding: 20px 10px 0 20px;
+        margin-top: 300px;
+        border-radius: 15px;
+    }
+    #conta-com-99 h1 {
+        color: var(--black-color);
+        padding-bottom: 25px;
+        font-size: 2.4em;
+        font-weight: 900;
+    }
+    #conta-com-99 p {
+        color: var(--black-color);
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+    /* config botao quero ser um motorista*/
+    #btn-quero-ser-motorista button {
+        width: 280px;
+        padding: 20px;
+        top: 15px;
+    }
+    /* Seja motorista da 99*/
+    #box-seja-motorista {
+        display: flex;
+        background-color: var(--white-color);
+        width: 280px;
+        padding: 68px 10px 50px 20px;
+        border-radius: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    /* h1 e p de seja um motorista da 99*/
+    #box-seja-motorista h1 {
+        color: var(--black-color);
+        font-weight: 800;
+        font-size: 1.8em;
+        line-height: 1.2em;
+        margin-bottom: 10px;
+    }
+    #box-seja-motorista p {
+        color: var(--black-color);
+        font-weight: 400;
+        font-size: 1.3em;
+        line-height: 1.2em;
+    }
+    /* Config botao seja motorista 99*/
+    #btn-quero-ser-motorista-2 button {
+        width: 280px;
+        padding: 25px;
+        top: 15px;
+    }
+    .box-vazia {
+        display: none;
+    }
+    #box-img {
+        width: 299px;
+    }
+    /* Incentivos para motoristas 99*/
+    #carrosel-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 50px;
+        overflow: hidden;
+    }
+    #incentivos-motorista h1 {
+        color: var(--black-color);
+        font-size: 1.7em;
+        font-weight: 800;
+        text-align: center;
+    }
+    .carrosel-items{
+        display: flex;
+        gap: 20px;
+        padding-left: 2px;
+        padding-right: 3px;
+        margin-top: 35px;
+        transition: transform 0.3s ease-in-out;
+    }
+    .item {
+        display: flex;
+        background-color: var(--yellow-color);
+        width: 280px;
+        height: 350px;
+        border-radius: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .carrosel-items  button {
+        width: 280px;
+        padding: 15px;
+        margin-top: 10px;
+        border-radius: 13px;
+    } 
+    #btnControls {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+
+    }
+    /* 99APP*/
+    #info-app-99 {
+        width: 280px;
+    }
+    #info-app-99 > p {
+        display: none;
+    }
+    #info-app-99 > h2, #baixe-app {
+        font-size: 1.9em;
+        font-weight: 800;
+        text-align: center;
+    }
+    #btns-app {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+    #img-box > img {
+        width: 320px;
+    }
+    #seja-motorista button {
+        width: 250px;
+        padding: 18px 10px;
+        font-size: 1.09em;
+        font-weight: 800;
+    }
+    /* Segurança até o seu destino*/
+    #box-laranja {
+        display: flex;
+        background-color: var(--orange-color);
+        width: 280px;
+        padding: 80px 25px 25px 25px;
+        border-radius: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    #container-segurança button {
+        background-color: var(--yellow-color);
+        width: 280px;
+        padding: 13px;
+        font-weight: 700;
+        font-size: 1em;
+        border: 0;
+        border-radius: 12px;
+    }
+    /* 99 para empresas*/
+    #moca-img > img {
+        width: 290px;
+    }
+    #container-99-empresa > h4, #gerencie-corridas, #conta-com-a-99 {
+        text-align: center;
+    }
+    /* blog 99 */
+    #box-moto-img {
+        display: flex;
+        background: var(--black-black) url(../images/img-motos.jpg) no-repeat center center scroll;
+        background-size: cover;
+        width: 280px;
+        height: 280px;
+        padding: 50px 0 0 25px;
+        border-radius: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-start;
+        gap: 25px;
+    }
+    /* Newsroom 99*/
+    #newsroom-tittle {
+        display: flex;
+        width: 98vw;
+        padding: 10px 0 10px 10px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    #newsroom-tittle > h2 {
+        color: var(--black-black);
+        font-size: 1.8em;
+        font-weight: 800;
+    }
+    #todos-post {
+        display: none;
+    }
+    #newsroom-container {
+        display: flex;
+        padding: 60px 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    .newsroom-item {
+        display: flex;
+    }
+    .img-newsroom {
+        width: 150px;
+    }
+    .img-newsroom > img {
+        border-radius: 15px;
+        width: 150px;
+        height: 130px;
+    }
+    .img-newsroom > img:first-child {
+        padding-left: 10px;
+    }
+    .descricao-posts {
+        padding: 0px 0 0 10px;
+    }
+    .descricao-posts > p {
+        display: inline-block;
+        color: var(--black-black);
+        width: 100px;
+        font-size: 1em;
+        font-weight: 800;
+        text-align: left;
+    }
+    /* ultima seção*/
+    #ultima-seçao {
+        display: flex;
+        background-color: var(--yellow-color);
+        padding: 65px 10px;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+    }
+    #ultima-seçao button {
+        width: 250px;
+        height: 65px;
+        font-size: 1em;
+        font-weight: 800;
+    }
+    /* footer*/
+    #lista-container {
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    #lista {
+        display: flex; 
+        flex-wrap: wrap;
+        align-items: flex-start;
+        text-align: left;
+        gap: 35px;
+    }
+    #lista li {
+        word-wrap: break-word;
+        padding-left: 10px;
+        font-size: .9em;
+    }
+    #lista-2 {
+        display: flex;
+        padding-left: 15px;
+        margin-top: 25px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: left;
+        gap: 10px;
+    }
+    #lista-3 {
+        display: flex;
+        flex-direction: column;
+        margin-left: 2px;
+        gap: 25px;
+    }
+}

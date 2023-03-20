@@ -21,8 +21,19 @@ document.addEventListener('scroll', () => {
 
 const btnNav = document.querySelector('#btn-nav')
 const navItems = document.querySelector('#nav-itens')
+let img = document.querySelector('#btn-nav img')
 btnNav.addEventListener('click', () => {
-    navItems.classList.toggle('navClass')
+    if (navItems.style.display == 'none') {
+        navItems.style.display = 'flex'
+        navItems.style.position = 'absolute'
+        img.src = './images/x-fechar.png'
+        img.style.width = '30px'
+        img.style.height = '30px'
+    } else {
+        navItems.style.display = 'none'
+        img.src = './images/3-barras-img.png'
+    }
+    
 
         
 })
@@ -65,5 +76,6 @@ rightBtn.addEventListener('click', () => {
     showCurrentItem()
 })
 showCurrentItem()
+
 
 //How to create a simple carousel in JavaScript?
