@@ -19,6 +19,18 @@
 }
 /* Media query tela de celular*/
 @media (max-width:730px) {
+    #nav-itens {
+        background-color: var(--white-color);
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        padding-left: 25px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 30px;
+        left: -430px;
+    }
     /* Conta com a 99*/
     #box-amarela {
         width: 280px; 
