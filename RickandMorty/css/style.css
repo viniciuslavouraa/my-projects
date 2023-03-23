@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Rick-morty';
+    src: url(../fonts/get_schwifty.ttf);
+}
+@keyframes size {
+    10% {
+        transform: scale(100%);
+        transform: rotate(16deg);
+        width: 300px;
+        top: -50px;
+    }
+    20% {
+        transform: scale(105%);
+        transform: rotate(32deg);
+        width: 364px;
+        top: -60px;
+    }
+    30% {
+        transform: scale(110%);
+        transform: rotate(48deg);
+        width: 428px;
+        top: -65px;
+    }
+    40% {
+        transform: scale(115%);
+        transform: rotate(64deg);
+        width: 492px;
+        top: -70px;
+    }
+    50% {
+        transform: scale(120%);
+        transform: rotate(80deg);
+        width: 556px;
+        top: -75px;
+    }
+    60% {
+        transform: scale(125%);
+        transform: rotate(96deg);
+        width: 620px;
+        top: -80px;
+    }
+    70% {
+        transform: scale(130%);
+        transform: rotate(112deg);
+        width: 684px;
+        top: -85px;
+
+    }
+    80% {
+        transform: scale(135%);
+        transform: rotate(128deg);
+        width: 748px;
+        top: -90px;
+    }
+    90% {
+        transform: scale(140%);
+        transform: rotate(144deg);
+        width: 812px;
+        top: -95px;
+    }
+    95% {
+        transform: scale(145%);
+        transform: rotate(160deg);
+        width: 876px;
+        top: -100px;
+    }
+    100% {
+        position: relative;
+        transform: scale(150%);
+        transform: rotate(180deg);
+        width: 940px;
+        top: -110px;
+    }
+}
+
+:root {
+    --font: 'Rick-morty'
+    --green: #82BF45;
+    --green-shadow: #B0D963;
+    --black-blue1: #16172B;
+    --black-blue2: #1D1D41;
+    --black-blue3: #242953;
+    --light-blue : #01B1C8;
+    --white: #FEFEFE;
+    --black: #000;
+}
+
+header {
+    display: flex;
+    background-image: linear-gradient(to bottom, #1D1D41, #1D1D41, #242953);
+    padding-top: 15px;
+    justify-content: center;
+}
+#box-logo {
+    height: 300px;
+}
+#tittle img {
+    position: relative;
+    z-index: 5;
+    top: -78px;
+}
+
+#tittle-personagens img {
+    z-index: 1;
+    position: relative;
+}
+
+body {
+    background-image: linear-gradient( to bottom,#1D1D41, #242953 );
+}
+main {
+    background-image: linear-gradient( to bottom, #242953,#1D1D41,#1D1D41 );
+}
+#portal-box {
+    display: flex;
+    justify-content: center;
+}
+
+
+h2 {
+    display: flex;
+    color: #01B1C8;
+    text-shadow: 3px -2px 0px #B3D929;
+    font-family: 'Rick-morty';
+    font-size: 4em;
+    letter-spacing: 1px;
+    justify-content: center;
+}
+
+/* classes JS*/
+
+.animation {
+    z-index: 10;
+    transition: all 500ms;
+    animation-name: size;
+    animation-delay: 0ms;
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+#stats {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.img {
+    border-radius: 20px;
+}
