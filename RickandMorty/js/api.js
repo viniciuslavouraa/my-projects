@@ -12,25 +12,15 @@ async function getAllCharacters() {
     }
 
     data.results.forEach((info) => {
+
+        const {image, id, name, gender, status, location, origin, species} = info
+            
+
         if (info.name === "Rick Sanchez") {
-            characters.rick.image = info.image
-            characters.rick.id = info.id
-            characters.rick.name = info.name
-            characters.rick.gender = info.gender
-            characters.rick.status = info.status
-            characters.rick.location = info.location
-            characters.rick.origin = info.origin
-            characters.rick.specie = info.species 
+            characters.rick = {image, id, name, gender, status, location, origin, species}
         }
         if (info.name === "Morty Smith") {
-            characters.morty.image = info.image
-            characters.morty.id = info.id
-            characters.morty.name = info.name
-            characters.morty.gender = info.gender
-            characters.morty.status = info.status
-            characters.morty.location = info.location
-            characters.morty.origin = info.origin
-            characters.morty.specie = info.specie
+            characters.morty = {image, id, name, gender, status, location, origin, species}
         }
 
     })
