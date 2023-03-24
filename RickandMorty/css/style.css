@@ -136,6 +136,22 @@ h2 {
     justify-content: center;
 }
 
+#personagens {
+    display: flex;
+    padding: 24px 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+#btns {
+    padding: 15px;
+
+}
+#next {
+    position: absolute;
+    margin-right: 100px;
+    right: 0;
+}
 /* classes JS*/
 
 .animation {
@@ -154,6 +170,27 @@ h2 {
     justify-content: flex-start;
 }
 
+
 .img {
-    border-radius: 20px;
+    z-index: 1;
+    border-radius: 12px;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.divImagens {
+    display: flex;
+    padding: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+.lerMais {
+
+}
+.divImg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
