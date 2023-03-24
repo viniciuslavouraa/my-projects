@@ -38,7 +38,10 @@ async function getAllCharacters() {
     //Create elemtns
     const personagemBox = document.querySelector('#personagens')
     const divImagens = document.createElement('div')
-    const img = document.createElement('img')
+    const imgRick = document.createElement('img')
+    const linkRick = document.createElement('a')
+    linkRick.setAttribute('href', './rick.html')
+    linkRick.appendChild(imgRick)
     const imgMorty = document.createElement('img')
     const imgSummer = document.createElement('img')
     const imgBeth = document.createElement('img')
@@ -55,7 +58,7 @@ async function getAllCharacters() {
     const imgAnts = document.createElement('img')
     //Add classList to elemnts
     divImagens.classList.add('divImagens')
-    img.classList.add('img')
+    imgRick.classList.add('img')
     imgMorty.classList.add('img')
     imgSummer.classList.add('img')
     imgBeth.classList.add('img')
@@ -71,7 +74,7 @@ async function getAllCharacters() {
     imgAnnie.classList.add('img')
     imgAnts.classList.add('img')
     // Set source to images
-    img.setAttribute('src', characters.ricks.Rick.image)
+    imgRick.setAttribute('src', characters.ricks.Rick.image)
     imgMorty.setAttribute('src', characters.familySmith.mortys.Morty.image)
     imgSummer.setAttribute('src', characters.familySmith.Summer.image)
     imgBeth.setAttribute('src', characters.familySmith.Beth.image)
@@ -90,7 +93,7 @@ async function getAllCharacters() {
     divImagens.appendChild(imgJerry)
     divImagens.appendChild(imgMorty)
     divImagens.appendChild(imgSummer)
-    divImagens.appendChild(img)
+    divImagens.appendChild(linkRick)
     divImagens.appendChild(imgAbradolf)
     divImagens.appendChild(imgAgency)
     divImagens.appendChild(imgAlan)
@@ -117,20 +120,14 @@ async function getAllCharacters() {
     personagemBox.appendChild(divImagens)
     personagemBox.appendChild(divImagens)
     console.log(characters)
-    //Continuar ciração dos clicks nas imagens
-    img.addEventListener('click', () => {
-        const div = document.createElement('div')
-        const stats = `Name: ${characters.ricks.Rick.name} <br>
-                       Gender: ${characters.ricks.Rick.gender} <br>
-                       Status: ${characters.ricks.Rick.status} <br>
-                       Location: ${characters.ricks.Rick.location.name} <br>
-                       Origin: ${characters.ricks.Rick.origin.name} <br>
-                       Species: ${characters.ricks.Rick.species}`
-        const statsParagraph = document.createElement('p')
-        statsParagraph.innerHTML = stats
-        div.appendChild(img)
-        div.appendChild(statsParagraph)
-        personagemBox.appendChild(div)
-    })
+    
+    // Rick page configs continuar
+    const rick = document.querySelector('#rick')
+    const imageRick = document.querySelector('#img-rick')
+    const statsBox = document.querySelector('#stats-box')
+    const statsParagraph = document.querySelector('#rick-stats')   
+    const stats =  'teste'
+    statsParagraph.appendChild(stats)
+    rick.appendChild(statsParagraph)
 }
 getAllCharacters()
