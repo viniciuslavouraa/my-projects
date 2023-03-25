@@ -35,13 +35,11 @@ async function getAllCharacters() {
         }
 
     })
-    //Create elemtns
+    //Create elements
     const personagemBox = document.querySelector('#personagens')
     const divImagens = document.createElement('div')
+    const divSoloImage = document.createElement('div')
     const imgRick = document.createElement('img')
-    const linkRick = document.createElement('a')
-    linkRick.setAttribute('href', './rick.html')
-    linkRick.appendChild(imgRick)
     const imgMorty = document.createElement('img')
     const imgSummer = document.createElement('img')
     const imgBeth = document.createElement('img')
@@ -57,7 +55,7 @@ async function getAllCharacters() {
     const imgAnnie = document.createElement('img')
     const imgAnts = document.createElement('img')
     //Add classList to elemnts
-    divImagens.classList.add('divImagens')
+    divSoloImage.classList.add('divImagens')
     imgRick.classList.add('img')
     imgMorty.classList.add('img')
     imgSummer.classList.add('img')
@@ -89,45 +87,45 @@ async function getAllCharacters() {
     imgAmish.setAttribute('src',characters.secondary.Amish.image)
     imgAnnie.setAttribute('src',characters.secondary.Annie.image)
     imgAnts.setAttribute('src',characters.secondary.Ants.image)
-    divImagens.appendChild(imgBeth)
-    divImagens.appendChild(imgJerry)
-    divImagens.appendChild(imgMorty)
-    divImagens.appendChild(imgSummer)
-    divImagens.appendChild(linkRick)
-    divImagens.appendChild(imgAbradolf)
-    divImagens.appendChild(imgAgency)
-    divImagens.appendChild(imgAlan)
-    divImagens.appendChild(imgAlbert)
-    divImagens.appendChild(imgAlexander)
-    divImagens.appendChild(imgAlien)
-    divImagens.appendChild(imgAmish)
-    divImagens.appendChild(imgAnnie)
-    divImagens.appendChild(imgAnts)
-    divImagens.appendChild(imgAbadango)
-    personagemBox.appendChild(divImagens)
-    personagemBox.appendChild(divImagens)
-    personagemBox.appendChild(divImagens)
-    personagemBox.appendChild(divImagens)
-    personagemBox.appendChild(divImagens)
-    personagemBox.appendChild(divImagens)
-    personagemBox.appendChild(divImagens)
-    personagemBox.appendChild(divImagens)
-    personagemBox.appendChild(divImagens)
-    personagemBox.appendChild(divImagens)
-    personagemBox.appendChild(divImagens)
-    personagemBox.appendChild(divImagens)
-    personagemBox.appendChild(divImagens)
-    personagemBox.appendChild(divImagens)
+    divSoloImage.appendChild(imgBeth)
+    divSoloImage.appendChild(imgJerry)
+    divSoloImage.appendChild(imgMorty)
+    divSoloImage.appendChild(imgSummer)
+    divSoloImage.appendChild(imgRick)
+    divSoloImage.appendChild(imgAbradolf)
+    divSoloImage.appendChild(imgAgency)
+    divSoloImage.appendChild(imgAlan)
+    divSoloImage.appendChild(imgAlbert)
+    divSoloImage.appendChild(imgAlexander)
+    divSoloImage.appendChild(imgAlien)
+    divSoloImage.appendChild(imgAmish)
+    divSoloImage.appendChild(imgAnnie)
+    divSoloImage.appendChild(imgAnts)
+    divSoloImage.appendChild(imgAbadango)
+    divImagens.appendChild(divSoloImage)
     personagemBox.appendChild(divImagens)
     console.log(characters)
-    
-    // Rick page configs continuar
-    const rick = document.querySelector('#rick')
-    const imageRick = document.querySelector('#img-rick')
-    const statsBox = document.querySelector('#stats-box')
-    const statsParagraph = document.querySelector('#rick-stats')   
-    const stats =  'teste'
-    statsParagraph.appendChild(stats)
-    rick.appendChild(statsParagraph)
+
+    const btnVoltar = document.createElement('button')
+    btnVoltar.textContent = 'Voltar'
+    btnVoltar.classList.add('btn-voltar')
+    // Continuar a criação de cada imagem com suas informações
+    // Array for all images
+    const images = { imgBeth, imgJerry, imgMorty, imgSummer, imgRick, imgAbradolf, imgAgency, imgAlan, imgAlbert, imgAlexander, imgAlien, imgAmish, imgAnnie, imgAnts, imgAbadango}
+
+    Object.values(images).forEach((imagem) => {
+        imagem.addEventListener('click', () => {
+            // Esconde todas as outras imagens
+            Object.values(images).forEach(outraImagem => {
+            if (outraImagem !== imagem) {
+                outraImagem.style.display = 'none'
+            }
+            })
+            
+            // Exibe apenas a imagem clicada
+            imagem.style.display = 'block'
+        })
+        })
+
 }
 getAllCharacters()
