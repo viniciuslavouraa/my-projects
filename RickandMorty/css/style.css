@@ -170,7 +170,14 @@ h2 {
     justify-content: flex-start;
 }
 
-
+.text {
+    color: #01B1C8;
+    text-shadow: 1px 1px 0px #B3D929;
+    font-size: 1.4em;
+    letter-spacing: 2px;
+    font-family: 'Rick-morty';
+    text-align: center;
+}
 .img {
     z-index: 1;
     border-radius: 12px;
