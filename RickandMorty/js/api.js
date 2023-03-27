@@ -220,24 +220,3 @@ async function getAllCharacters() {
         })
 }
 getAllCharacters()
-
-
-/*                // Esconde todas as outras imagens
-                if (imgMorty) {
-                    Object.values(rickImages).forEach((rickImage) => {
-                        rickImage.style.display = 'none'
-                    })
-                    Object.values(mortyImages).forEach((mortyImage) => {
-                        mortyImage.style.display = 'block'
-                    })
-                }
-                if (imgRick) {
-                    Object.values(mortyImages).forEach((mortyImage) => {
-                        mortyImage.style.display = 'none'
-                    })
-                    Object.values(rickImages).forEach((rickImage) => {
-                        rickImage.style.display = 'block'
-                        
-                    })
-                }
-'*/ 
