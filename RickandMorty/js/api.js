@@ -2,10 +2,9 @@ const url = 'https://rickandmortyapi.com/api/character'
 
 async function getAllCharacters() {
     const response = await fetch(url)
-    console.log(response)
 
     const data = await response.json()
-    console.log(data)
+    const totalPages = data.info.pages
     const characters = {
         familySmith: {
             mortys: {}
@@ -15,27 +14,32 @@ async function getAllCharacters() {
 
         }
     }
+ 
+    for (let i = 1 ; i <= totalPages; i++) {
+        const pageUrl = `https://rickandmortyapi.com/api/character?page=${i}`
+        const pageResponse = await fetch(pageUrl)
+        const pageData = await pageResponse.json()
+        console.log(pageData)
+        pageData.results.forEach((info) => {
+            const {image, id, name, gender, status, location, origin, species} = info
 
-    data.results.forEach((info) => {
-        const {image, id, name, gender, status, location, origin, species} = info
-
-        const [firstName, lastName] = info.name.split(" ")
-
-        if(firstName === "Rick" || lastName === "Rick") {
-            characters.ricks[firstName] = {image, id, name, gender, status, location, origin, species}
-        }
-        if (lastName === "Smith" && firstName !== "Morty") {
-            characters.familySmith[firstName] = {image, id, name, gender, status, location, origin, species}
-        }
-        if (firstName === "Morty" || lastName === "Morty") {
-            characters.familySmith.mortys[firstName] = {image, id, name, gender, status, location, origin, species}
-        }
-        if (firstName !== "Rick" && lastName !== "Rick"  && firstName !== "Morty" && lastName !== "Morty"  && lastName !== "Smith") {
-            characters.secondary[firstName] = {image, id, name, gender, status, location, origin, species}
-        }
-
-
-    })
+            const [firstName, lastName] = info.name.split(" ")
+            
+            if(firstName === "Rick" || lastName === "Rick") {
+                characters.ricks[firstName] = {image, id, name, gender, status, location, origin, species}
+            }
+            if (lastName === "Smith" && firstName !== "Morty") {
+                characters.familySmith[firstName] = {image, id, name, gender, status, location, origin, species}
+            }
+            if (firstName === "Morty" || lastName === "Morty") {
+                characters.familySmith.mortys[firstName] = {image, id, name, gender, status, location, origin, species}
+            }
+            if (firstName !== "Rick" && lastName !== "Rick"  && firstName !== "Morty" && lastName !== "Morty"  && lastName !== "Smith") {
+                characters.secondary[firstName] = {image, id, name, gender, status, location, origin, species}
+            }
+        })
+    }
+    // adicionar o resto dos personagens
     //Create elements
     const personagemBox = document.querySelector('#personagens')
     const divImagens = document.createElement('div')
@@ -220,3 +224,43 @@ async function getAllCharacters() {
         })
 }
 getAllCharacters()
+
+
+
+/* 
+    const response = await fetch(url)
+    console.log(response)
+
+    const data = await response.json()
+    console.log(data)
+    const characters = {
+        familySmith: {
+            mortys: {}
+        },
+        ricks: {},
+        secondary: {
+
+        }
+    }
+
+    data.results.forEach((info) => {
+        const {image, id, name, gender, status, location, origin, species} = info
+
+        const [firstName, lastName] = info.name.split(" ")
+
+        if(firstName === "Rick" || lastName === "Rick") {
+            characters.ricks[firstName] = {image, id, name, gender, status, location, origin, species}
+        }
+        if (lastName === "Smith" && firstName !== "Morty") {
+            characters.familySmith[firstName] = {image, id, name, gender, status, location, origin, species}
+        }
+        if (firstName === "Morty" || lastName === "Morty") {
+            characters.familySmith.mortys[firstName] = {image, id, name, gender, status, location, origin, species}
+        }
+        if (firstName !== "Rick" && lastName !== "Rick"  && firstName !== "Morty" && lastName !== "Morty"  && lastName !== "Smith") {
+            characters.secondary[firstName] = {image, id, name, gender, status, location, origin, species}
+        }
+
+
+    })
+*/
