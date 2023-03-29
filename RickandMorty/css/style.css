@@ -173,10 +173,10 @@ h2 {
 .text {
     color: #01B1C8;
     text-shadow: 1px 1px 0px #B3D929;
-    font-size: 1.4em;
+    font-size: 1.2em;
     letter-spacing: 2px;
     font-family: 'Rick-morty';
-    text-align: center;
+    text-align: left;
 }
 .img {
     z-index: 1;

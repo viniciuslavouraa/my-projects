@@ -14,7 +14,6 @@ async function getAllCharacters() {
 
         }
     }
- 
     for (let i = 1 ; i <= totalPages; i++) {
         const pageUrl = `https://rickandmortyapi.com/api/character?page=${i}`
         const pageResponse = await fetch(pageUrl)
@@ -155,9 +154,29 @@ async function getAllCharacters() {
     const imgAmish = document.createElement('img')
     const imgAnnie = document.createElement('img')
     const imgAnts = document.createElement('img')
+    const imgAdam = document.createElement('img')
+    const imgAir = document.createElement('img')
+    const imgAccountant = document.createElement('img')
+    const imgAlyson = document.createElement('img')
+    const imgAmazing = document.createElement('img')
+    const imgAmy = document.createElement('img')
+    const imgAnchor = document.createElement('img')
+    const imgAnchorMan = document.createElement('img')
+    const imgAnchorWoman = document.createElement('img')
+    const imgAnchorSnake = document.createElement('img')
+    const imgAndy = document.createElement('img')
+    const imgAngie = document.createElement('img')
+    const imgAngry = document.createElement('img')
+    // Continuar a adicionar imagens de forma mais clean pq tiltei
     // object with all images
-    const allImages = {imgRick, imgRickAdjudicator, imgRickAlien, imgRickAntenna,imgRickAqua, imgRickBaby,imgRickBald,imgRickBlack,imgRickColonial,imgRickCommander,imgRickCool,imgRickCop,imgRickCowboy,imgRickCronenberg,imgRickCyclops,imgRickDoofus,imgRickEvil,imgRickFascist,imgRickGlockenSpiel,imgRickHairDresser,imgRickHologram,imgRickHotHead,imgRickInsurance,imgRickInvestigator,imgRickJournalist,imgRickJuggling,imgRickMechanical,imgRickMemory,imgRickMetal,imgRickModern,imgRickMorty,imgRickPcoat,imgRickParty,imgRickPickle,imgRickPlumber,imgRickPunk,imgRickQuantum,imgRickRedHead,imgRickReverse,imgRickRobot,imgRickScar,imgRickScareCrow,imgRickSheik,imgRickSimple,imgRickSlow,imgRickSolicitor,imgRickTan,imgRickTeacher,imgRickTiny,imgRickToxic,imgRickTurkey,imgRickUnknow,imgRickVisor,imgRickWasp,imgRickWicker,imgRickWoman,imgRickYoYo, imgMorty,imgMortyAlien, imgMortyAqua, imgMortyArtist, imgMortyAntenna, imgMortyBartender, imgMortyBearded, imgMortyBig, imgMortyCop, imgMortyCowboy, imgMortyCronenberg, imgMortyCyclops, imgMortyDancer, imgMortyDeformed, imgMortyEvil, imgMortyFascist, imgMortyFat, imgMortyFlower,imgMortyGlasses, imgMortyGlockenSpiel, imgMortyHammerHead, imgMortyLawyer, imgMortyLizard, imgMortyMechanical, imgMortyPurple, imgMortyReBuildaMorty, imgMortyRedHead, imgMortyRobot, imgMortyScareCrow, imgMortySlick, imgMortyTortured, imgMortyToxic, imgMortyTrunk, imgMortyTurkey, imgMortyWasp, imgMortyWicker, imgSummer, imgBeth, imgJerry, imgAbadango, imgAbradolf, imgAgency, imgAlan, imgAlbert, imgAlexander, imgAlien, imgAmish, imgAnnie, imgAnts}
+    const allImages = {imgRick, imgRickAdjudicator, imgRickAlien, imgRickAntenna,imgRickAqua, imgRickBaby,imgRickBald,imgRickBlack,imgRickColonial,imgRickCommander,imgRickCool,imgRickCop,imgRickCowboy,imgRickCronenberg,imgRickCyclops,imgRickDoofus,imgRickEvil,imgRickFascist,imgRickGlockenSpiel,imgRickHairDresser,imgRickHologram,imgRickHotHead,imgRickInsurance,imgRickInvestigator,imgRickJournalist,imgRickJuggling,imgRickMechanical,imgRickMemory,imgRickMetal,imgRickModern,imgRickMorty,imgRickPcoat,imgRickParty,imgRickPickle,imgRickPlumber,imgRickPunk,imgRickQuantum,imgRickRedHead,imgRickReverse,imgRickRobot,imgRickScar,imgRickScareCrow,imgRickSheik,imgRickSimple,imgRickSlow,imgRickSolicitor,imgRickTan,imgRickTeacher,imgRickTiny,imgRickToxic,imgRickTurkey,imgRickUnknow,imgRickVisor,imgRickWasp,imgRickWicker,imgRickWoman,imgRickYoYo, imgMorty,imgMortyAlien, imgMortyAqua, imgMortyArtist, imgMortyAntenna, imgMortyBartender, imgMortyBearded, imgMortyBig, imgMortyCop, imgMortyCowboy, imgMortyCronenberg, imgMortyCyclops, imgMortyDancer, imgMortyDeformed, imgMortyEvil, imgMortyFascist, imgMortyFat, imgMortyFlower,imgMortyGlasses, imgMortyGlockenSpiel, imgMortyHammerHead, imgMortyLawyer, imgMortyLizard, imgMortyMechanical, imgMortyPurple, imgMortyReBuildaMorty, imgMortyRedHead, imgMortyRobot, imgMortyScareCrow, imgMortySlick, imgMortyTortured, imgMortyToxic, imgMortyTrunk, imgMortyTurkey, imgMortyWasp, imgMortyWicker, imgSummer, imgBeth, imgJerry, imgAbadango, imgAbradolf, imgAgency, imgAlan, imgAlbert, imgAlexander, imgAlien, imgAmish, imgAnnie, imgAnts, imgAdam, imgAir, imgAccountant, imgAlyson, imgAmazing, imgAmy, imgAnchor, imgAnchorMan, imgAnchorWoman, imgAnchorSnake, imgAndy, imgAngie, imgAngry}
 
+    // Images of page 1
+    const imagesPag1 = {imgBeth, imgJerry, imgMorty, imgSummer, imgRick, imgAbadango, imgAbradolf, imgAgency, imgAlan, imgAlbert, imgAlexander, imgAlien, imgAmish, imgAnnie, imgAnts, imgAdam, imgAir, imgAccountant,imgAlyson, imgAmazing, imgAmy, imgAnchor, imgAnchorMan, imgAnchorWoman, imgAnchorSnake, imgAndy, imgAngie, imgAngry}
+
+    const hiddeRicks = { imgRickAdjudicator, imgRickAlien, imgRickAntenna,imgRickAqua, imgRickBaby,imgRickBald,imgRickBlack,imgRickColonial,imgRickCommander,imgRickCool,imgRickCop,imgRickCowboy,imgRickCronenberg,imgRickCyclops,imgRickDoofus,imgRickEvil,imgRickFascist,imgRickGlockenSpiel,imgRickHairDresser,imgRickHologram,imgRickHotHead,imgRickInsurance,imgRickInvestigator,imgRickJournalist,imgRickJuggling,imgRickMechanical,imgRickMemory,imgRickMetal,imgRickModern,imgRickMorty,imgRickPcoat,imgRickParty,imgRickPickle,imgRickPlumber,imgRickPunk,imgRickQuantum,imgRickRedHead,imgRickReverse,imgRickRobot,imgRickScar,imgRickScareCrow,imgRickSheik,imgRickSimple,imgRickSlow,imgRickSolicitor,imgRickTan,imgRickTeacher,imgRickTiny,imgRickToxic,imgRickTurkey,imgRickUnknow,imgRickVisor,imgRickWasp,imgRickWicker,imgRickWoman,imgRickYoYo}
+
+    const hiddeMortys = {imgMortyAlien, imgMortyAqua, imgMortyArtist, imgMortyAntenna, imgMortyBartender, imgMortyBearded, imgMortyBig, imgMortyCop, imgMortyCowboy, imgMortyCronenberg, imgMortyCyclops, imgMortyDancer, imgMortyDeformed, imgMortyEvil, imgMortyFascist, imgMortyFat, imgMortyFlower,imgMortyGlasses, imgMortyGlockenSpiel, imgMortyHammerHead, imgMortyLawyer, imgMortyLizard, imgMortyMechanical, imgMortyPurple, imgMortyReBuildaMorty, imgMortyRedHead, imgMortyRobot, imgMortyScareCrow, imgMortySlick, imgMortyTortured, imgMortyToxic, imgMortyTrunk, imgMortyTurkey, imgMortyWasp, imgMortyWicker}
 
     // Create characters information 
     const infoMorty = document.createElement('p')
@@ -191,7 +210,20 @@ async function getAllCharacters() {
     Object.values(allImages).forEach((img) => {
         img.classList.add('img')
     })
-
+    Object.values(imagesPag1).forEach((img1) => {
+        divSoloImage.appendChild(img1)
+        img1.style.display = 'block'
+    })
+    // Hidde all secondary Ricks
+    Object.values(hiddeRicks).forEach((hiddeRick) => {
+        divSoloImage.appendChild(hiddeRick)
+        hiddeRick.style.display = 'none'
+    })
+    // Hidde all secondary mortys
+    Object.values(hiddeMortys).forEach((hiddeMorty) => {
+        divSoloImage.appendChild(hiddeMorty)
+        hiddeMorty.style.display = 'none'
+    })
     // Set source to images
     // Rick images source
     imgRick.setAttribute('src', characters.ricks.Rick.image)
@@ -253,7 +285,39 @@ async function getAllCharacters() {
     imgMorty.setAttribute('src', characters.familySmith.mortys.Morty.image)
     imgMortyAlien.setAttribute('src', characters.familySmith.mortys.Alien.image)
     imgMortyAntenna.setAttribute('src', characters.familySmith.mortys.Antenna.image)
-    
+    imgMortyAqua.setAttribute('src', characters.familySmith.mortys.Aqua.image)
+    imgMortyArtist.setAttribute('src', characters.familySmith.mortys.Artist.image)
+    imgMortyBartender.setAttribute('src', characters.familySmith.mortys.Bartender.image)
+    imgMortyBearded.setAttribute('src', characters.familySmith.mortys.Bearded)
+    imgMortyBig.setAttribute('src', characters.familySmith.mortys.Big.image)
+    imgMortyCop.setAttribute('src', characters.familySmith.mortys.Cop.image)
+    imgMortyCowboy.setAttribute('src', characters.familySmith.mortys.Cowboy.image)
+    imgMortyCronenberg.setAttribute('src', characters.familySmith.mortys.Cronenberg.image)
+    imgMortyCyclops.setAttribute('src', characters.familySmith.mortys.Cyclops.image)
+    imgMortyDancer.setAttribute('src', characters.familySmith.mortys.Dancer.image)
+    imgMortyDeformed.setAttribute('src', characters.familySmith.mortys.Deformed.image)
+    imgMortyEvil.setAttribute('src', characters.familySmith.mortys.Evil.image)
+    imgMortyFascist.setAttribute('src', characters.familySmith.mortys.Fascist.image)
+    imgMortyFat.setAttribute('src', characters.familySmith.mortys.Fat.image)
+    imgMortyFlower.setAttribute('src', characters.familySmith.mortys.Flower.image)
+    imgMortyGlasses.setAttribute('src', characters.familySmith.mortys.Glasses.image)
+    imgMortyGlockenSpiel.setAttribute('src', characters.familySmith.mortys.Glockenspiel.image)
+    imgMortyHammerHead.setAttribute('src', characters.familySmith.mortys.Hammerhead.image)
+    imgMortyLawyer.setAttribute('src', characters.familySmith.mortys.Lawyer.image)
+    imgMortyLizard.setAttribute('src', characters.familySmith.mortys.Lizard.image)
+    imgMortyMechanical.setAttribute('src', characters.familySmith.mortys.Mechanical.image)
+    imgMortyPurple.setAttribute('src', characters.familySmith.mortys.Purple.image)
+    imgMortyRedHead.setAttribute('src', characters.familySmith.mortys.Redhead.image)
+    imgMortyRobot.setAttribute('src', characters.familySmith.mortys.Robot.image)
+    imgMortyScareCrow.setAttribute('src', characters.familySmith.mortys.Scarecrow.image)
+    imgMortySlick.setAttribute('src', characters.familySmith.mortys.Slick.image)
+    imgMortyTortured.setAttribute('src', characters.familySmith.mortys.Tortured.image)
+    imgMortyToxic.setAttribute('src', characters.familySmith.mortys.Toxic.image)
+    imgMortyTrunk.setAttribute('src', characters.familySmith.mortys.Trunk.image)
+    imgMortyTurkey.setAttribute('src', characters.familySmith.mortys.Turkey.image)
+    imgMortyWasp.setAttribute('src', characters.familySmith.mortys.Wasp.image)
+    imgMortyWicker.setAttribute('src', characters.familySmith.mortys.Wicker.image)
+    // Secondary images source
     imgSummer.setAttribute('src', characters.familySmith.Summer.image)
     imgBeth.setAttribute('src', characters.familySmith.Beth.image)
     imgJerry.setAttribute('src', characters.familySmith.Jerry.image)
@@ -267,38 +331,20 @@ async function getAllCharacters() {
     imgAmish.setAttribute('src',characters.secondary.Amish.image)
     imgAnnie.setAttribute('src',characters.secondary.Annie.image)
     imgAnts.setAttribute('src',characters.secondary.Ants.image)
-    divSoloImage.appendChild(imgBeth)
-    divSoloImage.appendChild(imgJerry)
-    divSoloImage.appendChild(imgMorty)
-    divSoloImage.appendChild(infoMorty).style.display = 'none'
-    divSoloImage.appendChild(imgMortyAlien).style.display = 'none'
-    divSoloImage.appendChild(infoMortyAlien).style.display = 'none'
-    divSoloImage.appendChild(imgMortyAntenna).style.display = 'none'
-    divSoloImage.appendChild(infoMortyAntenna).style.display = 'none'
-    divSoloImage.appendChild(imgSummer)
-    divSoloImage.appendChild(imgRick)
-    divSoloImage.appendChild(imgRickAdjudicator).style.display = 'none'
-    divSoloImage.appendChild(imgRickAlien).style.display = 'none' 
-    divSoloImage.appendChild(imgRickAntenna).style.display = 'none'
-    divSoloImage.appendChild(imgRickAqua).style.display = 'none'
-    divSoloImage.appendChild(imgRickBaby).style.display = 'none'
-    divSoloImage.appendChild(imgRickBald).style.display = 'none'
-    divSoloImage.appendChild(imgRickBlack).style.display = 'none'
-    divSoloImage.appendChild(imgRickColonial).style.display = 'none'
-    divSoloImage.appendChild(imgRickCommander).style.display = 'none'
-    divSoloImage.appendChild(imgRickCool).style.display = 'none'
-    divSoloImage.appendChild(imgRickCop).style.display = 'none'
-    // Containuar adicionando as imagens á divSoloImage
-    divSoloImage.appendChild(imgAbradolf)
-    divSoloImage.appendChild(imgAgency)
-    divSoloImage.appendChild(imgAlan)
-    divSoloImage.appendChild(imgAlbert)
-    divSoloImage.appendChild(imgAlexander)
-    divSoloImage.appendChild(imgAlien)
-    divSoloImage.appendChild(imgAmish)
-    divSoloImage.appendChild(imgAnnie)
-    divSoloImage.appendChild(imgAnts)
-    divSoloImage.appendChild(imgAbadango)
+    imgAdam.setAttribute('src', characters.secondary.Adam.image)
+    imgAir.setAttribute('src', characters.secondary.Air.image)
+    imgAccountant.setAttribute('src', characters.secondary.Accountant.image)
+    imgAlyson.setAttribute('src',characters.secondary.Alyson.image)
+    imgAmazing.setAttribute('src',characters.secondary.Amazing.image)
+    imgAmy.setAttribute('src',characters.secondary.Amy.image)
+    imgAnchor.setAttribute('src',characters.secondary.Anchor.image)
+    imgAnchorMan.setAttribute('src',characters.secondary.Anchorman.image)
+    imgAnchorWoman.setAttribute('src',characters.secondary.Anchorwoman.image)
+    imgAnchorSnake.setAttribute('src',characters.secondary.Anchosnake.image)
+    imgAndy.setAttribute('src',characters.secondary.Andy.image)
+    imgAngie.setAttribute('src',characters.secondary.Angie.image)
+    imgAngry.setAttribute('src',characters.secondary.Angry.image)
+
     divImagens.appendChild(divSoloImage)
     personagemBox.appendChild(divImagens)
     console.log(characters)
@@ -306,18 +352,14 @@ async function getAllCharacters() {
     const btnVoltar = document.createElement('button')
     btnVoltar.textContent = 'Voltar'
     btnVoltar.classList.add('btn-voltar')
-    // Continuar a criação de cada imagem com suas informações
-    // Array for all images
-        const images = {imgRick, imgRickAdjudicator, imgRickAlien, imgRickAntenna,imgRickAqua, imgRickBaby,imgRickBald,imgRickBlack,imgRickColonial,imgRickCommander,imgRickCool,imgRickCop,imgRickCowboy,imgRickCronenberg,imgRickCyclops,imgRickDoofus,imgRickEvil,imgRickFascist,imgRickGlockenSpiel,imgRickHairDresser,imgRickHologram,imgRickHotHead,imgRickInsurance,imgRickInvestigator,imgRickJournalist,imgRickJuggling,imgRickMechanical,imgRickMemory,imgRickMetal,imgRickModern,imgRickMorty,imgRickPcoat,imgRickParty,imgRickPickle,imgRickPlumber,imgRickPunk,imgRickQuantum,imgRickRedHead,imgRickReverse,imgRickRobot,imgRickScar,imgRickScareCrow,imgRickSheik,imgRickSimple,imgRickSlow,imgRickSolicitor,imgRickTan,imgRickTeacher,imgRickTiny,imgRickToxic,imgRickTurkey,imgRickUnknow,imgRickVisor,imgRickWasp,imgRickWicker,imgRickWoman,imgRickYoYo, imgMorty,imgMortyAlien, imgMortyAqua, imgMortyArtist, imgMortyAntenna, imgMortyBartender, imgMortyBearded, imgMortyBig, imgMortyCop, imgMortyCowboy, imgMortyCronenberg, imgMortyCyclops, imgMortyDancer, imgMortyDeformed, imgMortyEvil, imgMortyFascist, imgMortyFat, imgMortyFlower,imgMortyGlasses, imgMortyGlockenSpiel, imgMortyHammerHead, imgMortyLawyer, imgMortyLizard, imgMortyMechanical, imgMortyPurple, imgMortyReBuildaMorty, imgMortyRedHead, imgMortyRobot, imgMortyScareCrow, imgMortySlick, imgMortyTortured, imgMortyToxic, imgMortyTrunk, imgMortyTurkey, imgMortyWasp, imgMortyWicker, imgSummer, imgBeth, imgJerry, imgAbadango, imgAbradolf, imgAgency, imgAlan, imgAlbert, imgAlexander, imgAlien, imgAmish, imgAnnie, imgAnts}
 
         const mortyImages = {imgMorty,imgMortyAlien, imgMortyAqua, imgMortyArtist, imgMortyAntenna, imgMortyBartender, imgMortyBearded, imgMortyBig, imgMortyCop, imgMortyCowboy, imgMortyCronenberg, imgMortyCyclops, imgMortyDancer, imgMortyDeformed, imgMortyEvil, imgMortyFascist, imgMortyFat, imgMortyFlower,imgMortyGlasses, imgMortyGlockenSpiel, imgMortyHammerHead, imgMortyLawyer, imgMortyLizard, imgMortyMechanical, imgMortyPurple, imgMortyReBuildaMorty, imgMortyRedHead, imgMortyRobot, imgMortyScareCrow, imgMortySlick, imgMortyTortured, imgMortyToxic, imgMortyTrunk, imgMortyTurkey, imgMortyWasp, imgMortyWicker}
 
-        const rickImages = {imgRick, imgRickAdjudicator, imgRickAlien, imgRickAntenna,imgRickAqua, imgRickBaby,imgRickBald,imgRickBlack,imgRickColonial,imgRickCommander,imgRickCool,imgRickCop,imgRickCowboy,imgRickCronenberg,imgRickCyclops,imgRickDoofus,imgRickEvil,imgRickFascist,imgRickGlockenSpiel,imgRickHairDresser,imgRickHologram,imgRickHotHead,imgRickInsurance,imgRickInvestigator,imgRickJournalist,imgRickJuggling,imgRickMechanical,imgRickMemory,imgRickMetal,imgRickModern,imgRickMorty,imgRickPcoat,imgRickParty,imgRickPickle,imgRickPlumber,imgRickPunk,imgRickQuantum,imgRickRedHead,imgRickReverse,imgRickRobot,imgRickScar,imgRickScareCrow,imgRickSheik,imgRickSimple,imgRickSlow,imgRickSolicitor,imgRickTan,imgRickTeacher,imgRickTiny,imgRickToxic,imgRickTurkey,imgRickUnknow,imgRickVisor,imgRickWasp,imgRickWicker,imgRickWoman,imgRickYoYo}
+        const rickImages = {imgRick, imgRickAdjudicator, imgRickAlien, imgRickAntenna,imgRickAqua, imgRickBaby,imgRickBald,imgRickBlack,imgRickColonial,imgRickCommander,imgRickCool,imgRickCop,imgRickCowboy,imgRickCronenberg,imgRickCyclops,imgRickDoofus,imgRickEvil,imgRickFascist,imgRickGlockenSpiel,imgRickHairDresser,imgRickHologram,imgRickHotHead,imgRickInsurance,imgRickInvestigator,imgRickJournalist,imgRickJuggling,imgRickMechanical,imgRickMemory,imgRickMetal,imgRickModern,imgRickMorty,imgRickParty,imgRickPickle,imgRickPlumber,imgRickPunk,imgRickQuantum,imgRickRedHead,imgRickReverse,imgRickRobot,imgRickScar,imgRickScareCrow,imgRickSheik,imgRickSimple,imgRickSlow,imgRickSolicitor,imgRickTan,imgRickTeacher,imgRickTiny,imgRickToxic,imgRickTurkey,imgRickUnknow,imgRickVisor,imgRickWasp,imgRickWicker,imgRickWoman,}
 
-        Object.values(images).forEach((imagem) => {
+        Object.values(allImages).forEach((imagem) => {
             imagem.addEventListener('click', () => {
-                divSoloImage.classList.add('divImg')
-                Object.values(images).forEach(outraImagem => {
+                Object.values(allImages).forEach(outraImagem => {
                     if (outraImagem !== imagem) {
                         outraImagem.style.display = 'none'
                     }
@@ -377,3 +419,42 @@ async function getAllCharacters() {
         })
 }
 getAllCharacters()
+
+/*
+    divSoloImage.appendChild(imgRickAdjudicator).style.display = 'none'
+    divSoloImage.appendChild(imgRickAlien).style.display = 'none' 
+    divSoloImage.appendChild(imgRickAntenna).style.display = 'none'
+    divSoloImage.appendChild(imgRickAqua).style.display = 'none'
+    divSoloImage.appendChild(imgRickBaby).style.display = 'none'
+    divSoloImage.appendChild(imgRickBald).style.display = 'none'
+    divSoloImage.appendChild(imgRickBlack).style.display = 'none'
+    divSoloImage.appendChild(imgRickColonial).style.display = 'none'
+    divSoloImage.appendChild(imgRickCommander).style.display = 'none'
+    divSoloImage.appendChild(imgRickCool).style.display = 'none'
+    divSoloImage.appendChild(imgRickCop).style.display = 'none'
+    divSoloImage.appendChild(imgRickCowboy).style.display = 'none'
+    divSoloImage.appendChild(imgRickCronenberg).style.display = 'none'
+    divSoloImage.appendChild(imgRickCyclops).style.display = 'none'
+    divSoloImage.appendChild(imgRickDoofus).style.display = 'none'
+    divSoloImage.appendChild(imgRickEvil).style.display = 'none'
+    divSoloImage.appendChild(imgRickFascist).style.display = 'none'
+    divSoloImage.appendChild(imgRickGlockenSpiel).style.display = 'none'
+    divSoloImage.appendChild(imgRickHairDresser).style.display = 'none'
+    divSoloImage.appendChild(imgRickHologram).style.display = 'none'
+    divSoloImage.appendChild(imgRickHotHead).style.display = 'none'
+    divSoloImage.appendChild(imgRickInsurance).style.display = 'none'
+    divSoloImage.appendChild(imgRickInvestigator).style.display = 'none'
+    divSoloImage.appendChild(imgRickJournalist).style.display = 'none'
+    divSoloImage.appendChild(imgRickJuggling).style.display = 'none'
+    divSoloImage.appendChild(imgRickMechanical).style.display = 'none'
+    divSoloImage.appendChild(imgRickMemory).style.display = 'none'
+    divSoloImage.appendChild(imgRickMetal).style.display = 'none'
+    divSoloImage.appendChild(imgRickModern).style.display = 'none'
+    divSoloImage.appendChild(imgRickMorty).style.display = 'none'
+    divSoloImage.appendChild(imgRickParty).style.display = 'none'
+    divSoloImage.appendChild(imgRickPickle).style.display = 'none'
+    divSoloImage.appendChild(imgRickPlumber).style.display = 'none'
+    divSoloImage.appendChild(imgRickPunk).style.display = 'none'
+    divSoloImage.appendChild(imgRickQuantum).style.display = 'none'
+    divSoloImage.appendChild(imgRickRedHead).style.display = 'none'
+    */
