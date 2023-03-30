@@ -12,6 +12,12 @@ const jump = () => {
         mario.classList.remove('jump')
     }, 500);
 };
+const jumpCell = () => {
+    mario.classList.add('jump');
+    setTimeout(() => {
+        mario.classList.remove('jump')
+    }, 500);
+}
 tryAgain.addEventListener('click',() => {
     location.reload()
 })
@@ -48,5 +54,6 @@ const loop = setInterval(() => {
     }
 }, 10);
 document.addEventListener('keydown', jump);
+document.addEventListener('touchstart',jumpCell)
 
    
