@@ -41,8 +41,10 @@ async function getAllCharacters() {
     // adicionar o resto dos personagens
     //Create elements
     const personagemBox = document.querySelector('#personagens')
+    const personagemBox2 = document.querySelector('.perso2')
     const divImagens = document.createElement('div')
     const divSoloImage = document.createElement('div')
+    const divSoloImage2 = document.createElement('div')
     const image = document.createElement('div')
     
     
@@ -112,110 +114,96 @@ async function getAllCharacters() {
     const allImages = {ricks, mortys, secundaryCharacters}
 
     Object.values(allImages).forEach((imgObj) => {
-        Object.values(imgObj).forEach((img) => {
-            img.classList.add('img')
-            divSoloImage.appendChild(img)
-        })
-    })
+            Object.values(imgObj).forEach((img) => {
+                img.classList.add('img')
+                divSoloImage.appendChild(img)
+                img.addEventListener('click',(e) => {
+                    img.classList.toggle('flip-card')
+                    const backCard = document.createElement('div')
+                    const imgkey = e.target.getAttribute('key')
+                    const imgParent = e.target.parentNode
+                    // Dar um jeito de adicionar as informações quando o card virar de forma clean
+                    const keys ={} = e.target
+                    console.log(`é o ${imgkey}`)
+                    if (imgkey == 'Rick-Sanchez') {
+                        console.log('é o rick')
+                    }
+                    if (img.classList.contains('flip-card')) {
+                        console.log('teste')
+                        setTimeout(() => {
+                            backCard.classList.toggle('card')
+                            backCard.setAttribute('key',imgkey)
+                            imgParent.replaceChild(backCard, e.target)
+                        }, 400);
+                    }
 
-    // Create characters information 
-    const infoMorty = document.createElement('p')
-    const infoMortyAlien = document.createElement('p')
-    const infoMortyAntenna = document.createElement('p')
-    const infoMortyBartender =document.createElement('p')
-    const infoMortyBearded = document.createElement('p')
-    const infoMortyBig = document.createElement('p')
-    const infoMortyCop = document.createElement('p')
-    const infoMortyCowboy = document.createElement('p')
-    const infoMortyCronenberg = document.createElement('p')
-    const infoMortyCyclops = document.createElement('p')
-    const infoMortyDancer =document.createElement('p')
-    const infoMortyDeformed = document.createElement('p')
-    const infoMortyEvil = document.createElement('p')
-    const allInfo = {infoMorty, infoMortyAlien,infoMortyAntenna, infoMortyBartender,infoMortyBearded, infoMortyBig, infoMortyCop, infoMortyCowboy, infoMortyCronenberg, infoMortyCyclops, infoMortyDancer, infoMortyDeformed, infoMortyEvil}
-    Object.values(allInfo).forEach((infos) => {
-        infos.classList.add('text')
-        infos.innerHTML = `
-        Gender: <br>
-        id: <br>
-        Location:<br> <br>
-        Name: <br>
-        Origin: <br
-        Species: <br>
-        Status: <br>
-        `
-    })
+                    backCard.addEventListener('click', () =>{
+                        setTimeout(() => {
+                            imgParent.replaceChild(e.target, backCard)
+                            img.classList.toggle('flip-card')
+                        }, 400);
+                    })
+                    console.log(`Clicked image with key ${e.target.getAttribute('key')}`)
+                })
+                })
+
+            }) 
     //Add classList to elemnts
     divSoloImage.classList.add('divImagens')
     divImagens.appendChild(divSoloImage)
     personagemBox.appendChild(divImagens)
-    console.log(characters)
-
-        
+    console.log(characters)    
 }
 getAllCharacters()
 
 /*
- Está quebrado nã consigo clicar nos personagens RESOLVER!!!!!
-Object.values(allImages).forEach((imagem) => {
-            imagem.addEventListener('click', () => {
-                Object.values(allImages).forEach(outraImagem => {
-                    if (outraImagem !== imagem) {
-                        outraImagem.style.display = 'none'
+                img.addEventListener('click',(e) => {
+                    img.classList.toggle('flip-card')
+
+                    const backCard = document.createElement('div')
+                    const imgkey = e.target.getAttribute('key')
+                    const imgParent = e.target.parentNode
+                    const character = findCharacterByKey(imgkey)
+                    if (character) {
+                        const backCard = document.createElement('div');
+                        backCard.innerHTML = `Created: ${character.created}<br>Gender: ${character.gender}`;
+                        backCard.classList.add('card');
+                        backCard.setAttribute('key', imgkey);
+                        imgParent.replaceChild(backCard, e.target);
+                        img.classList.toggle('flip-card');
                     }
+                    function findCharacterByKey(key) {
+                        for ( const personagens of Object.values(characters)){
+                            for(const character of Object.values(personagens)) {
+                                if (character.key === key) {
+                                    return character
+                                }
+                            }
+                        }
+                        return null
+                    }
+                    console.log(imgkey)
+                    if (img.classList.contains('flip-card')) {
+                        setTimeout(() => {
+                            backCard.classList.toggle('card')
+                            backCard.setAttribute('key',imgkey)
+                            imgParent.replaceChild(backCard, e.target)
+                        }, 400);
+                    }
+
+                    backCard.addEventListener('click', () =>{
+                        const imgkey = backCard.getAttribute('key');
+                        const character = findCharacterByKey(imgkey);
+                        if (character) {
+                          imgParent.replaceChild(img, backCard);
+                          img.classList.toggle('flip-card');
+                        }
+                        setTimeout(() => {
+                            imgParent.replaceChild(e.target, backCard)
+                            img.classList.toggle('flip-card')
+                        }, 400);
+                    })
+                    console.log(`Clicked image with key ${e.target.getAttribute('key')}`)
                 })
-                if (imagem == imgMorty) {
-                    if (characters.familySmith.mortys.Morty) {
-                        imgMorty.appendChild(infoMorty)
-                        infoMorty.innerHTML = `
-                        Gender:${characters.familySmith.mortys.Morty.gender} <br>
-                        id:${characters.familySmith.mortys.Morty.id} <br>
-                        Location:<br>${characters.familySmith.mortys.Morty.location.name} <br>
-                        Name:${characters.familySmith.mortys.Morty.name} <br>
-                        Origin:${characters.familySmith.mortys.Morty.origin.name} <br
-                        Species:${characters.familySmith.mortys.Morty.species} <br>
-                        Status:${characters.familySmith.mortys.Morty.status} <br>
-                        `
-                        infoMorty.style.display = 'block'
-                    }
-                    if (characters.familySmith.mortys.Alien) {
-                        infoMortyAlien.innerHTML =  `
-                        Gender:  ${characters.familySmith.mortys.Alien.gender} <br>
-                        id:  ${characters.familySmith.mortys.Alien.id} <br>
-                        Location:<br>  ${characters.familySmith.mortys.Alien.location.name} <br>
-                        Name: ${characters.familySmith.mortys.Alien.name} <br>
-                        Origin:  ${characters.familySmith.mortys.Alien.origin.name} <br>
-                        Species:  ${characters.familySmith.mortys.Alien.species} <br>
-                        Status:  ${characters.familySmith.mortys.Alien.status} <br>
-                        `
-                        infoMortyAlien.style.display = 'block'
-                    }
-                    if (characters.familySmith.mortys.Antenna) {
-                        infoMortyAntenna.innerHTML =  `
-                        Gender:${characters.familySmith.mortys.Antenna.gender} <br>
-                        id:${characters.familySmith.mortys.Antenna.id} <br>
-                        Location:<br>${characters.familySmith.mortys.Antenna.location.name} <br>
-                        Name: ${characters.familySmith.mortys.Antenna.name} <br>
-                        Origin:${characters.familySmith.mortys.Antenna.origin.name} <br
-                        Species:${characters.familySmith.mortys.Antenna.species} <br>
-                        Status:${characters.familySmith.mortys.Antenna.status} <br>
-                        `
-                        infoMortyAntenna.style.display = 'block'
-                    }
-                    if (characters.familySmith.mortys.Aqua) {
 
-                    }
-
-                    Object.values(mortyImages).forEach((mortyImage) => {
-                        mortyImage.style.display = 'block'
-                    })
-                } else if (imagem == imgRick) {
-                    Object.values(rickImages).forEach((rickImage) => {
-                        rickImage.style.display = 'block'
-                    })
-                }
-                // Exibe apenas a imagem clicada
-                imagem.style.display = 'block'
-            })
-        })
- */
+*/

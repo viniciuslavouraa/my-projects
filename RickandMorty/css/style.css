@@ -179,7 +179,7 @@ h2 {
     text-align: left;
 }
 .img {
-    z-index: 1;
+    z-index: 3;
     border-radius: 12px;
     width: 200px;
     height: 200px;
@@ -203,4 +203,24 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.flip-card {
+    transform: rotateY(180deg);
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.card {
+    background-color: #00000048;
+    color: #fff;
+    width: 200px;
+    height: 200px;
+    transition: transform 0.5s ease, opacity 0.5s ease 0.5s;
+    z-index: 1;
+    cursor: pointer;
+    overflow: hidden;
+}
+.card .flip-card {
+    transform: rotateY(180deg);
+    z-index: 2;
 }
