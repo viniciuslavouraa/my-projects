@@ -219,6 +219,8 @@ h2 {
     z-index: 1;
     cursor: pointer;
     overflow: hidden;
+    border-radius: 12px;
+    text-align: center;
 }
 .card .flip-card {
     transform: rotateY(180deg);
