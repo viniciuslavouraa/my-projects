@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#todolist-box {
+    background-color: #fff;
+    width: 500px;
+    height: 300px;
+    margin: 25px auto;
+}
+header {
+    display: flex;
+    color: #EA3936;
+    padding: 8px 0;
+    justify-content: center;
+    border: 2px solid #d1d1d1;
+    border-radius: 10px 10px 0 0;
+}
+header > h1 {
+    font-size: 1.9em;
+    font-weight: bolder;
+}
+
+#toDo-box {
+    display: flex;
+    padding: 10px 0;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+input[type="text"] {
+    outline: 0;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    border-bottom: 1px solid #3333337c;
+    transition: 400ms;
+}
+input[type="text"]:focus {
+    border-bottom: 1px solid #000;
+    transform: scale(102%);
+}
+label {
+    font-size: .9em;
+}
+#toDo-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#toDo-view-itens {
+    display: flex;
+    padding: 10px;
+    gap: 8px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#toDo-doned {
+    padding: 10px 0;
+}
+
+button {
+    background-color: transparent;
+    border: 1px solid #3333337c;
+    padding: 3px 8px;
+    border-radius: 3px;
+    transition: 400ms;
+}
+button:hover {
+    font-weight: bold;
+    transform: scale(102%);
+    border: 1px solid #000;
+    cursor: pointer;
+}
